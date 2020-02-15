@@ -1,9 +1,8 @@
 # Python am Freitag
 
-Introduction to Python
-It is the material for a full week of Pithon.
+Introduction to Python. It is the material for a full week of course.
 
-Table of contents of the course:  
+Table of contents of the course:   (in progress)
 
 *   [Inline HTML](#html)
 *   [Installation](#Installation)  
@@ -21,23 +20,23 @@ Table of contents of the course:
 
 ## Installation
 
-Installation python 3.8, PyCharm IDE
-Intro in the Python console, IDLE, PyCharm IDE.
-Python basics: print hello world, work with variables, numbers (int, floats), strings , lists, tuples, dictionaries, loops (while, for ), functions,  read and write files to disks,  catch errors, import (internal and external packages), pip package manager, classes and objects, regex, internet sockets
-Indentation is important. Indented 4 spaces 
+Installation python 3.8, PyCharm IDE.  
+Intro in the Python console, IDLE, PyCharm IDE.  
+Python basics: print hello world, work with variables, numbers (int, floats), strings , lists, tuples, dictionaries, loops (while, for ), functions,  read and write files to disks,  catch errors, import (internal and external packages), pip package manager, classes and objects, regex, internet sockets.  
+Indentation is important. Indented 4 spaces  
 
 <h2 id="Hello">Hello World</h2>
 
-Make a new file called hello.py and run it in terminal and in pycharm.. and in interpreter
+Make a new file called hello.py and run it in terminal and in pycharm.. and in interpreter.  
 ```python
 print("hello, world”)
 
 ```
-“Hello World” is a constant or a string literal.
-Python does not need curly braces, semicolons or to imports main etc. 
-It works out of the box.
+“Hello World” is a constant or a string literal.  
+Python does not need curly braces, semicolons or to imports main etc.   
+It works out of the box.   
 
-Different ways to print. We need no space after the hello if we use the comma variant.
+Different ways to print. We need no space after the hello if we use the comma variant.  
 ```python
 answer = input("Name: ")
 print("hello,", answer)
@@ -53,7 +52,7 @@ print("hello " + planet + "!")
 
 print("hello " + planet.upper() + "\n")
 ```
-Playing around:
+Playing around:  
 ```python
 print(planet.isascii())
 print(planet.islower())
@@ -66,7 +65,7 @@ print(planet[0])
 print(planet.index("w"))
 print(planet.replace("world", "er"))
 ```
-link text itself
+
 
 ## Variables 
 Object in Speicher mit einem Name. Container. Named place in memory where a programmer can store data and later retrieve it with the name. Can be changed. You get to choose the name!
@@ -84,7 +83,7 @@ tuple -> sequence of immutable value
 dict -> collection key value pairs, implemented as hash table 
 set -> collection of unique value
 
-Numbers 
+#### Numbers 
 ```python
 from math import *
 print(str(2) + "my fav number")
@@ -118,7 +117,7 @@ print(f"x mod y = {x % y}”)
 ```
 
 ## Floats
-
+in progress. 
 
 
 <h2 id="Swap">Swapping values in Python</h2>
@@ -132,7 +131,14 @@ x, y = y, x
 print(f"x is {x}, y is {y}”)
 ```
 In c for comparison:
+```c
+int a = 1;
+int b = 2;
 
+int tmp = a;
+a = b;
+b = tmp;
+```
 
 ## Boolean
 ```python
