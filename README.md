@@ -1334,6 +1334,7 @@ What is the solution to your captcha?
 
 https://adventofcode.com/2017/day/1
 
+## Bubble
 Python program for implementation of Bubble Sort
 ```python
 def bubbleSort(arr):
@@ -1356,7 +1357,7 @@ for i in range(len(arr)):
 ```
 
 
-[A List of Python Resources:][2]
+## [A List of Python Resources:][2]
 
 * Beginners to programming  
 Whirlwind Tour of Python: Nice only book that covers all the essential Python basics without overwhelming the Python novice.  
@@ -1428,13 +1429,15 @@ def sum2(n):
 print(f"{sum2(10):.0f}")
 ```
 
-## Some Humor
-
-https://www.xkcd.com/323/
+Also check
 
 https://projekteuler.de
 
 https://projecteuler.net/problem=1
+
+## Some Humor
+
+https://www.xkcd.com/323/
 
 If Python is executable pseudocode then Perl is executable line noise..
 https://www.youtube.com/watch?v=zJOS0sV2a24
