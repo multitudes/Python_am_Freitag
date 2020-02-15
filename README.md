@@ -13,6 +13,7 @@ Table of contents of the course:
 *   [Floats](#Floats)  
 *   [Swapping values](#Swap)  
 *   [Boolean](#Boolean) 
+*   [Input](#Input)  
 *   [String](#String)  
 *   [Boolean](#Boolean)  
 *   [String interpolation](#interpolation)  
