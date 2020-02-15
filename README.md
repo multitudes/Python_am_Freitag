@@ -6,7 +6,7 @@ It is the material for a full week of Pithon.
 Table of contents of the course:
 
 [Installation](#Installation)  
-[Hello World](#Hello World)  
+[Hello World](#HelloWorld)  
 [Variables](#Variables)  
 [Variables](#Variables)  
 [Variables](#Variables)  
