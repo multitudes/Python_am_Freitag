@@ -9,10 +9,13 @@ Table of contents of the course:
 *   [Installation](#Installation)  
 *   [Hello World](#Hello)  
 *   [Variables](#Variables)  
-*   [Variables](#Variables)  
-*   [Variables](#Variables)  
-*   [Variables](#Variables)  
-*   [Variables](#Variables)  
+*   [Integers](#Integers)  
+*   [Floats](#Floats)  
+*   [Swapping values](#Swap)  
+*   [Boolean](#Boolean) 
+*   [String](#String)  
+*   [Boolean](#Boolean)  
+*   [String interpolation](#interpolation)  
 *   [Some Humor](#Some Humor)
 
 ## Installation
@@ -117,7 +120,8 @@ print(f"x mod y = {x % y}”)
 
 
 
-## Swap
+<h2 id="Swap">Swapping values in Python</h2>
+In Python it is very easy to swap two values like the below example with two ints
 ```
 # Swaps two integers
 x = 1
@@ -154,6 +158,8 @@ elif s.lower() in ["n", "no"]:
 ```
 
 ## Input
+
+Get input from the user:
 ```
 name = input("Enter your name: ")
 age = input("Enter your age :")
@@ -167,7 +173,8 @@ num2 = input("Enter a number : ")
 result = num1 + num2
 print(result)
 ```
-#### String interpolation
+
+<h2 id="interpolation">String interpolation</h2>
 ```
 print('Hello %s!' % ('world'))
 print('%s had %s pies.' % ('Alice', 42))
