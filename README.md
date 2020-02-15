@@ -2,7 +2,8 @@
 
 Introduction to Python
 
-[link text itself]
+[Variables](#Variables)
+
 
 Installation python 3.8, PyCharm IDE
 Intro in the Python console, IDLE, PyCharm IDE
