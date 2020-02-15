@@ -5,14 +5,14 @@ It is the material for a full week of Pithon.
 
 Table of contents of the course:
 
-[Installation](#Installation)
-[Hello World](#Hello World)
-[Variables](#Variables)
-[Variables](#Variables)
-[Variables](#Variables)
-[Variables](#Variables)
-[Variables](#Variables)
-[Variables](#Variables)
+[Installation](#Installation)  
+[Hello World](#Hello World)  
+[Variables](#Variables)  
+[Variables](#Variables)  
+[Variables](#Variables)  
+[Variables](#Variables)  
+[Variables](#Variables)  
+[Some Humor](#Some Humor)
 
 ## Installation
 
@@ -1369,7 +1369,7 @@ For loops are slow!
 We compare how quickly the runtime grows not the actual time. In the first function it grows 
 proportionally to n + 1. For big numbers the “+1” is irrelevant so we just say O(n)
 Asymptotic analysis. In math describing limiting behaviour
-
+```python
 def sum1(n):
     final_sum = 0
     for x in range(n + 1):
@@ -1382,19 +1382,9 @@ def sum2(n):
     return n * (n + 1) / 2
 
 print(f"{sum2(10):.0f}")
+```
 
-
-
-Cory Efram Doctorow (/ˈkɒri ˈdɒktəroʊ/; born July 17, 1971) is a Canadian-British blogger, journalist, and science fiction author 
-Richard Matthew Stallman ist ein US-amerikanischer Aktivist und Programmierer, der nach eigenen Angaben im September 1983 die Freie-Software-Bewegung gründete.Stallman launched the GNU Project, founded the Free Software Foundation, developed the GNU Compiler Collection and GNU Emacs, and wrote the GNU General Public License.
-Stallman launched the GNU Project in September 1983 to create a Unix-like computer operating system composed entirely of free software
-
-Janeane Marie Garofalo (/dʒəˈniːn ɡəˈrɒfəloʊ/; born September 28, 1964) is an American actress, voice artist, stand-up comedian, and writer. Garofalo began her career as a stand-up comedian and became a cast member on The Ben Stiller Show, The Larry Sanders Show, and Saturday Night Live, then appeared in more than 50 movies, with leading or major roles in The Truth About Cats and Dogs, Wet Hot American Summer, The Matchmaker, Reality Bites, Steal This Movie!, Clay Pigeons, Sweethearts, Mystery Men, and The Independent, among numerous others. She has been a series regular on television programs such as Wet Hot American Summer: First Day of Camp, 24, and Girlfriends' Guide to Divorce.[1] Garofalo is an outspoken progressive activist. From March 2004 to July 2006, she hosted Air America Radio's The Majority Report with Sam Seder.
-
-Programming ability graph in function of the alcohol intake.. the spike    
-
-Leet symbols, especially the number 1337, are Internet memes that have spilled over into popular culture. Signs that show the numbers "1337" are popular motifs for pictures and shared widely across the Internet.Leet (or "1337"), also known as eleet or leetspeak, is a system of modified spellings used primarily on the Internet. It often uses character replacements in ways that play on the similarity of their glyphs via reflection or other resemblance. Additionally, it modifies certain words based on a system of suffixes and alternate meanings. There are many dialects or linguistic varieties in different online communities.Leet (sometimes written as "1337" or "l33t"), also known as eleet or leetspeak, is another alphabet for the English language that is used mostly on the internet. It uses various combinations of ASCII characters to replace Latinate letters. For example, leet spellings of the word leet include 1337 and l33t; eleet may be spelled 31337 or 3l33t. It is used on the internet in forums, chat rooms and online games.
-https://en.wikipedia.org/wiki/Leet
+## Some Humor
 
 https://www.xkcd.com/323/
 Bac blood alcohol content
@@ -1408,21 +1398,6 @@ https://www.youtube.com/watch?v=zJOS0sV2a24
 
 Antigravity
 
+```
+```
 https://hg.python.org/cpython/file/tip/Lib/antigravity.py
-
-REJECTED by DON HERTZFELDT
-Stick figure art
-Don Hertzfeldt (born August 1, 1976) is an American animator, writer, and independent filmmaker. He is a two-time Academy Award nominee who is best known for the animated films World of Tomorrow, It's Such a Beautiful Day, Rejected, and World of Tomorrow Episode Two. In 2014, his work appeared on The Simpsons. Eight of his short films have competed at the Sundance Film Festival, a festival record.[1] He is also the only filmmaker to have won the Sundance Film Festival's Grand Jury Prize for Short Film twice.
-https://en.wikipedia.org/wiki/River_Tam
-The Ig Nobel Prize (/ˌɪɡnoʊˈbɛl/ IG-noh-BEL) is a satiric prize awarded annually since 1991 to celebrate ten unusual or trivial achievements in scientific research
-Organized by the scientific humor magazine Annals of Improbable Research
-
-Guitar hero 2
-Lynyrd Skynyrd - Free Bird
-
-Rimsky-Korsakov.
-Flight of the Bumblebee
-
-Like DICK DALE - Misirlou 1963 but three times as fast
-RIP king of the surf guitar. Dick Dale, known as The King of the Surf Guitar.  Dale's surf rock version later gained renewed popularity through its use in the 1994 Quentin Tarantino film Pulp Fiction.
-
