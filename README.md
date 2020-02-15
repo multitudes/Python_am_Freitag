@@ -5,8 +5,8 @@ It is the material for a full week of Pithon.
 
 Table of contents of the course:
 
-[Installation a](#Installation a)  
-[Hello World](#HelloWorld)  
+[Installation](#Installation)  
+[Hello World](#Hello World)  
 [Variables](#Variables)  
 [Variables](#Variables)  
 [Variables](#Variables)  
@@ -14,7 +14,7 @@ Table of contents of the course:
 [Variables](#Variables)  
 [Some Humor](#Some Humor)
 
-## Installation a
+## Installation
 
 Installation python 3.8, PyCharm IDE
 Intro in the Python console, IDLE, PyCharm IDE.
@@ -1396,8 +1396,12 @@ https://projecteuler.net/problem=1
 If Python is executable pseudocode then Perl is executable line noise..
 https://www.youtube.com/watch?v=zJOS0sV2a24
 
-Antigravity
+#### [Antigravity][1]
 
 ```
 ```
-https://hg.python.org/cpython/file/tip/Lib/antigravity.py
+
+
+
+
+[1]: <https://hg.python.org/cpython/file/tip/Lib/antigravity.py> "Hobbit lifestyles"
