@@ -5,7 +5,7 @@ It is the material for a full week of Pithon.
 
 Table of contents of the course:
 
-[Installation](#Installation)  
+[Installation a](#Installation a)  
 [Hello World](#HelloWorld)  
 [Variables](#Variables)  
 [Variables](#Variables)  
@@ -14,7 +14,7 @@ Table of contents of the course:
 [Variables](#Variables)  
 [Some Humor](#Some Humor)
 
-## Installation
+## Installation a
 
 Installation python 3.8, PyCharm IDE
 Intro in the Python console, IDLE, PyCharm IDE.
