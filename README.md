@@ -1,31 +1,44 @@
 # Python am Freitag
 
 Introduction to Python
+It is the material for a full week of Pithon.
 
+Table of contents of the course:
+
+[Installation](#Installation)
+[Hello World](#Hello World)
+[Variables](#Variables)
+[Variables](#Variables)
+[Variables](#Variables)
+[Variables](#Variables)
+[Variables](#Variables)
 [Variables](#Variables)
 
+## Installation
 
 Installation python 3.8, PyCharm IDE
-Intro in the Python console, IDLE, PyCharm IDE
+Intro in the Python console, IDLE, PyCharm IDE.
 Python basics: print hello world, work with variables, numbers (int, floats), strings , lists, tuples, dictionaries, loops (while, for ), functions,  read and write files to disks,  catch errors, import (internal and external packages), pip package manager, classes and objects, regex, internet sockets
-
 Indentation is important. Indented 4 spaces 
 
+## Hello World
+
 Make a new file called hello.py and run it in terminal and in pycharm.. and in interpreter
-```
+```python
 print("hello, world”)
 
-“Hello World” is a constant or a string literal
 ```
-No need for curly braces semicolon imports main  etc
+“Hello World” is a constant or a string literal.
+Python does not need curly braces, semicolons or to imports main etc. 
+It works out of the box.
 
-We need no space after the hello
+Different ways to print. We need no space after the hello if we use the comma variant.
 ```
 answer = input("Name: ")
 print("hello,", answer)
 ```
 
-Another option is
+Another option is formatting the output. The syntax is:
 ```
 answer = input("Name: ")
 print(f"hello, {answer}")
@@ -34,6 +47,9 @@ planet = "world"
 print("hello " + planet + "!")
 
 print("hello " + planet.upper() + "\n")
+```
+Playing around:
+```
 print(planet.isascii())
 print(planet.islower())
 
