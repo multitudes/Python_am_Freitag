@@ -5,15 +5,15 @@ It is the material for a full week of Pithon.
 
 Table of contents of the course:  
 
-    *   [Inline HTML](#html)
-    *   [Installation](#Installation)  
-    *   [Hello World](#Hello)  
-    *   [Variables](#Variables)  
-    *   [Variables](#Variables)  
-    *   [Variables](#Variables)  
-    *   [Variables](#Variables)  
-    *   [Variables](#Variables)  
-    *   [Some Humor](#Some Humor)
+*   [Inline HTML](#html)
+*   [Installation](#Installation)  
+*   [Hello World](#Hello)  
+*   [Variables](#Variables)  
+*   [Variables](#Variables)  
+*   [Variables](#Variables)  
+*   [Variables](#Variables)  
+*   [Variables](#Variables)  
+*   [Some Humor](#Some Humor)
 
 ## Installation
 
