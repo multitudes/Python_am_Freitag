@@ -4,7 +4,6 @@ Introduction to Python. It is the material for a full week of course.
 
 Table of contents of the course:   (in progress)
 
-*   [Inline HTML](#html)
 *   [Installation](#Installation)  
 *   [Hello World](#Hello)  
 *   [Variables](#Variables)  
