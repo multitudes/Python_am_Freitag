@@ -6,7 +6,7 @@ It is the material for a full week of Pithon.
 Table of contents of the course:
 
 [Installation](#Installation)  
-[Hello World](#Hello)  
+[HelloWorld](#HelloWorld)  
 [Variables](#Variables)  
 [Variables](#Variables)  
 [Variables](#Variables)  
@@ -21,7 +21,7 @@ Intro in the Python console, IDLE, PyCharm IDE.
 Python basics: print hello world, work with variables, numbers (int, floats), strings , lists, tuples, dictionaries, loops (while, for ), functions,  read and write files to disks,  catch errors, import (internal and external packages), pip package manager, classes and objects, regex, internet sockets
 Indentation is important. Indented 4 spaces 
 
-## Hello World
+## HelloWorld
 
 Make a new file called hello.py and run it in terminal and in pycharm.. and in interpreter
 ```python
