@@ -410,9 +410,10 @@ def hello():
     print(“hello")
 if __name__ == "__main__":
     main()
+```
 
-
-# Abstraction with parameterization
+## Abstraction with parameterization
+```
 def main():
     hello(3)
 def hello(n):
@@ -421,19 +422,25 @@ def hello(n):
         print("hello")
 if __name__ == "__main__":
     main()
+```
 
-#extravagant!
+#### extravagant!
+```
 print("hello\n" * 3)
+```
 
 Mario!
-# Print out this many rows
+## Print out this many rows
+```
 for i in range(4):
     # Print out this many columns
     for j in range(4):
         print("#", end="")
     print()
+```
 
-Integer overflow!
+## Integer overflow!
+```
 from time import sleep
 # Iteratively double i
 i = 1
@@ -441,34 +448,38 @@ while True:
     print(i)
     i *= 2
     sleep(1)
+```
 
-floating point imprecision
+## floating point imprecision
+```
 x = float(input("x: "))
 y = float(input("y: "))
 z = x / y
-#not integer overflow but floating point imprecision
+# not integer overflow but floating point imprecision
 print(f"x / y = {z:.50f}")
 # print mit zero digits..
 print(f"{sum2(10):.0f}")
-
-Strings
+```
+## Strings
+```
 s = input("Input: ")
 print("Output:")
 for c in s:
     print(c)
+```
 
-Iterate on characters
+## Iterate on characters
+```
 s = input("Input: ")
 print("Output:", end="")
 for i in range(len(s)):
     print(s[i], end="")
-
-Uppercase 
-
+```
+## Uppercase 
+```
 s = input("Input: ")
 print("Output:", end="")
 print(s.upper())
-
 c = 'p'
 print("The ASCII value of '" + c + "' is", ord(c))
 print(chr(65))
@@ -482,10 +493,10 @@ line = "From laurent.brusa@me.com Sat Jan 5 09:15:55 2020"
 words = line.split()
 email = words[1]
 email_pieces = email.split("@")
+```
 
 
-
-dictionary
+## dictionary
 
 Single quote are necessary in dict for the keys
 
@@ -494,7 +505,7 @@ Key value pairs
 A common use is counting how many times we see something
 It is an error to reference a key which is not in the dict
 There is the “in” operator to check wether a key is in the dict 
-
+```
 counts = {}
 pangram = "The quick brown fox jumps over the lazy dog"
 for letter in pangram:
@@ -503,19 +514,22 @@ for letter in pangram:
     else:
         counts[letter] = counts[letter] + 1
 print(counts)
-
+```
 Instead of checking if a key is already in the dic use get
+```
 counts = {}
 pangram = "The quick brown fox jumps over the lazy dog"
 for letter in pangram:
     counts[letter] = counts.get(letter, 0) + 1
 print(counts)
-
+```
 A for loop going through the keys
+```
 for key in counts:
     print(key, counts[key])
-
+```
 Items are tuples!
+```
 print((counts.keys()))
 print((counts.values()))
 print((counts.items()))
@@ -532,8 +546,10 @@ for letter, count in counts.items():
         high_letter = letter
         high_count = count
 print("The highest letter count is :",(high_letter, high_count))
+```
 
-Simple start ex
+Simple exercise:
+```
 from sys import exit
 people = {
     "me": "123-123456",
@@ -547,11 +563,12 @@ if "David" in people:
 else:
     print("\nNot Found")
     exit(1)
-
+```
 
 Tuples
 Tuples are like lists, indexed at zero, can be iterated. Like strings are not modifiable.
 Tuples can be sorted. We can sort dictionary using the items() 
+```
 y = (2,4,5,66)
 for i in y:
     print(i)
@@ -561,24 +578,28 @@ print((max(y)))
 print(y)
 
 print(sorted(counts.items()))
-
+```
 Sort by values. Create a list of tuples key value and invert and append
+```
 tmp = list()
 for (key, value) in counts.items():
     tmp.append((value, key))
 tmp = sorted(tmp)
 print(tmp)
-
+```
 Shortest !
+```
 print(sorted([ (v,k) for k,v in counts.items() ]))
-
+```
 The ten top!
+```
 for value, key in tmp[:10]:
     print(key, value)
+```
 
 
-
-Functions 
+## Functions 
+```
 def say_hi() :
     print("Hello")
 
@@ -590,22 +611,24 @@ def say_hi(name):
     print("hello" + name)
 
 say_hi("steve")
-
+```
 Using the return statement
+```
 # This will not return nothing..
 def cube(num):
     num * num * num
 
 cube(2)
 
-#need
+#need a return statement
 def cube(num):
     return num * num * num
 
 a = cube(2)
 print(a)
-
-Replace vowels or letters!
+```
+Replace vowels or letters
+```
 def translate(name):
     translation = ""
     for letter in name:
@@ -617,20 +640,20 @@ def translate(name):
 
 print((translate("giraffe")))
 print((translate(input("\n enter name: "))))
+```
 
-
-Try and except
+## Try and except
 Basic:
-
+```
 try:
     number = int(input("enter a number "))
     print(number)
 
 except:
     print("Invalid")
-
+```
 better:
-
+```
 try:
     value = 10 / 0
     number = int(input("enter a number "))
@@ -642,20 +665,21 @@ except ZeroDivisionError as err:
 
 except ValueError:
     print("invalid input”)
-
-Read and write io
+```
+## Read and write io
 Opening a file. The open() function returns a file handle
 .read() is the whole string!
 Use the mbox file:
+```
 fhand = open('mbox-short.txt')
 for line in fhand:
     if line.startswith("From:"):
         print(line, end="")
 # Or for the returns  
     line = line.rstrip()
-
+```
 Or better
-
+```
 file_name = input("File: ")
 try:
     fhand = open(file_name)
@@ -666,43 +690,45 @@ for line in fhand:
     if line.startswith("From:"):
         line = line.rstrip()
         print(line)
-
-
+```
+```
 text_file = open("text.txt", “r") # when “w” not readable!
 print(text_file.readable())
 text_file.close()
 
 print(text_file.read())
 print(text_file.readline())
-
-Import
+```
+## Import
 
 Make a file called useful.py
 In the file put this function
-
+```
 import Random    
 def roll_dice(num):
     return random.randint(1, num)
-
+```
 In a new file you call this function inserting the import on the top:
+```
 import useful_tools
 
 print(useful_tools.roll_dice(10))
-
+```
 
 Check the docs for more modules!
 
 
-Classes 
+## Classes 
 
 Create a student class in a file Student.py
+```
 class Student:
     def __init__(self, name, fach):
         self.name = name
         self.fach = fach
-
+```
 In dem anderen file:
-
+```
 from Student import Student
 from Student import Question
 
@@ -711,9 +737,10 @@ student1 = Student(“jim","Business")
 print(student1)
 print(student1.name)
 print(Student)
-
-Constructor and deconstructor
+```
+## Constructor and deconstructor
 Destructor is seldom used. Constructor is optional. 
+```
 class PartyAnimal:
     x = 0
     name = ''
@@ -725,13 +752,14 @@ class PartyAnimal:
           print(self.name,'party count',self.x)
     def __del__(self):
             print(self.name, 'I am deconstructed')
-
+```
 
 
 
 Exercise : create a Frage class… for Quiz
 
 ex:
+```
 question_prompts = ["What color are oranges? \n(a) orange \n(b) green\n”, "what color are bananas: \n(a) red\n(b) yellow\n"]
 questions = [Question(question_prompts[0],"a"),
              Question(question_prompts[1], "b")]
@@ -744,9 +772,10 @@ def run_test(questions):
     print("you got a score of : " + str(score) + "/" +                      str(len(questions)) + " correct")
 
 run_test(questions)
-
-Inheritance
+```
+## Inheritance
 One file:
+```
 class Chef:
 
 def make_chicken(self):
@@ -757,9 +786,9 @@ def make_salad(self):
 
 def make_special(self):
     print("here come a rib!")
-
+```
 Another file:
-
+```
 from Chef import Chef
 
 class ChineseChef(Chef):
@@ -769,9 +798,9 @@ class ChineseChef(Chef):
 
     def make_special(self):
         print("here comes a duck!”)
-
+```
 Another file:
-
+```
 from Chef import Chef
 from ChineseChef import ChineseChef
 
@@ -783,13 +812,13 @@ myChineseChef = ChineseChef()
 myChineseChef.make_fried_rice()
 myChineseChef.make_special()
 myChineseChef.make_chicken()
+```
 
 
- 
-Get positive int
+## Get positive int
 
 In Python the scope of a variable is the whole function
-
+```
 def main():
     i = get_positive_int("Positive integer: ")
     print(i)
@@ -802,15 +831,15 @@ def get_positive_int(prompt):
     return n
 if __name__ == "__main__":
     main()
+```
 
 
 
-
-Command Line Arguments
+## Command Line Arguments
 
 
 Offset by one in python
-
+```
 from sys import argv
 for i in range(len(argv)):
 print(argv[i])
@@ -818,15 +847,17 @@ if len(argv) == 2:
     print(f"hello, {argv[1]}")
 else:
     print("hello, world")
-
+```
 Exit with value:
+```
 from sys import argv, exit
 if len(argv) < 2:
     print("missing command line argument \n")
     exit(1)
 exit(0)
-
+```
 Array property ‘in’
+```
 from sys import exit
 names = ['me', 'sarah', 'marco', 'steve']
 name = input("name: ")
@@ -836,20 +867,11 @@ if name in names:
 else:
     print("\nNot Found")
     exit(1)
+```
 
 
-
-
-
-
-
-
-
-
-
-
-File io
-
+## File io
+```
 import csv
 file = open("notebook.csv", "a")
 name = input("name ")
@@ -857,31 +879,30 @@ phone = input("phone ")
 writer = csv.writer(file)
 writer.writerow((name, phone))
 file.close()
-
-
-
+```
 or
-
+```
 import csv
 name = input("name ")
 phone = input("phone ")
 with open("notebook.csv", "a") as file:
     writer = csv.writer(file)
     writer.writerow((name, phone))
-
+```
 Regular expression
 See the quick guide
 Need to import re, re.search() to match re.findall() to extract
 Start with 
+```
 # Check answer
 s = input("Do you agree? \n")
 if s.lower() in ["y", "yes"]:
     print("\nagreed!")
 elif s.lower() in ["n", "no"]:
     print("no")
-
+```
 And
-
+```
 import re
 s = input("Do you agree? \n")
 # Check answer
@@ -891,8 +912,9 @@ elif re.search("no", s):
     print("not agreed")
 else:
     print("I do not know”)
-
+```
 Or change to 
+```
 if re.search("yes|y", s):
 
 if re.search("y(es)?", s):
@@ -900,8 +922,9 @@ if re.search("y(es)?", s):
 if re.search("y(es)?", s, re.IGNORECASE):
 
 if re.search("^y(es)?$", s, re.IGNORECASE):
-
+```
 With emails. In mbox file
+```
 import re
 fhand = open('mbox-short.txt')
 for line in fhand:
@@ -912,42 +935,46 @@ for line in fhand:
 for line in fhand:
 if re.search("^X.*:", line):
     print(line, end="")
-
+```
+```
 x = "My 2 favorite numbers are 42 and 19"
 y = re.findall("[0-9]+", x)
 print(y)
-
+```
 Greedy matching with * +
-
+```
 x = "From: using the colon again here : and see"
 y = re.findall("^F.+:", x)
 print(y)
-
+```
 \S is one non whitespace character
+```
 import re
 fhand = open('mbox-short.txt')
 text = fhand.read()
 y = re.findall("From: (\S+@\S+)", text)
 print(y)
-
+```
 \$ is one real dollar sign
+```
 x = "a real $10 bill"
 y = re.findall("\$[0-9]+", x)
 print(y)
+```
+More advanced
 
-More advanced
-
-QR
+## QR
+```
 import qrcode
 #pip install qrcode
 image = qrcode.make("https://youtu.be/oHg5SJYRHA0")
 image.save("qr.png", "PNG")
+```
 
+## Socket programming
 
-Socket programming
+> “Tell me and I forget. Show me and I remember. Involve me and I understand.”  Chinese proverb 
 
-“Tell me and I forget. Show me and I remember. Involve me and I understand.” 
-Chinese proverb 
 End systems are hosts like server and client host. Network-core devices are routers etc
 two predominant architectural paradigms used in modern network applications: the client-server architecture or the peer-to-peer (P2P) architecture. 
 In a client-server architecture, there is an always-on host, called the server, which services requests from many other hosts, called clients. 
@@ -964,6 +991,7 @@ Standardisierte Ports (0–1023) Auf Unix-artigen Betriebssystemen darf nur das 
 Dynamische Port-Adressen von 49152 - 65535 . dynamische Ports, die von Anwendungen lokal und/ oder dynamisch genutzt werden können.
 
 Client:
+```
 from socket import *
 # the IP address of the server
 serverName = '0.0.0.0'
@@ -979,8 +1007,9 @@ clientSocket.sendto(message.encode(), (serverName, serverPort))
 modifiedMessage, serverAddress = clientSocket.recvfrom(2048)
 print("This is the message I received from server: \n", modifiedMessage.decode())
 clientSocket.close()
-
+```
 Server side
+```
 from socket import *
 # this file will be on my server
 #create a server in python-go to directory and enter in terminal
@@ -1004,9 +1033,9 @@ while True:
               modifiedMessage)
         # send
         serverSocket.sendto(modifiedMessage.encode(), clientAddress)
-
+```
 With urllib
-
+```
 import urllib.request, urllib.parse, urllib.error
 fhand = urllib.request.urlopen('http://data.pr4e.org/romeo.txt')
 counts = dict()
@@ -1017,15 +1046,17 @@ for line in fhand:
         print(word)
         counts[word] = counts.get(word, 0) + 1
 print(counts)
+```
 
-
-#open the terminal below and enter python3 -m http.server 81
+open the terminal below and enter `python3 -m http.server 81`
+```
 fhand = urllib.request.urlopen('http://0.0.0.0:81/pangram.txt')
 for line in fhand:
     print(line.decode().strip())
+```
 
-Web scraping: Beautiful soup
-
+## Web scraping: Beautiful soup
+```
 import urllib.request, urllib.parse, urllib.error
 from bs4 import BeautifulSoup
 url = input("enter: ")
@@ -1034,9 +1065,9 @@ soup = BeautifulSoup(html, 'html.parser')
 tags = soup('a')
 for tag in tags:
     print(tag.get('href', None))
-
+```
 If error due to certificates
-
+```
 import ssl
 
 ctx = ssl.create_default_context()
@@ -1050,13 +1081,12 @@ soup = BeautifulSoup(html, 'html.parser')
 tags = soup('a')
 for tag in tags:
     print(tag.get('href', None))
+```
+## Serialise and deserialise with JSON and XML
+In progress
 
-Serialise and deserialise with JSON and XML
-
-
-
-
-# Words in dictionary
+## Words in dictionary
+```
 words = set()
 
 def check(word):
@@ -1078,10 +1108,10 @@ def size():
 def unload():
     """Unloads dictionary from memory, returning true if successful else false"""
     return True
+```
 
-
-Speller
-
+## Speller
+```
 import re
 import sys
 import time
@@ -1229,26 +1259,26 @@ print(f"TOTAL TIME:           {time_load + time_check + time_size + time_unload:
 
 # Success
 sys.exit(0)
+```
 
-
-Pillow
+## Pillow
 
 This is the blur effect
-
+```
 from PIL import Image, ImageFilter
 
 before = Image.open("Mushroom.png")
 after = before.filter(ImageFilter.BLUR)
 after.save("out.png")
+```
 
+## Exercises
 
-Exercises
-
-
-CS50 problems 
+Look at the CS50 problems like: 
 mario/ cash / credit cards/cesar / crack / vigenere / bleep
 
-Mario
+```
+#Mario
 n = 8
 a: int = n
 b: int = 0
@@ -1257,8 +1287,10 @@ for i in range(n):
     b = b + 1
     print("." * a, end="")
     print("x" * b, end="\n")
+```
 
 Both sides
+```
 n = 8
 a: int = n
 b: int = 0
@@ -1269,10 +1301,8 @@ for i in range(n):
     print("x" * b, end=" ")
     print("x" * b, end="")
     print("." * a, end="\n")
-
+```
 Print a cat
-
-
 
 Three Questions Quiz
 Can be done in many different ways, 
@@ -1281,7 +1311,7 @@ With reading from file
 With lists / dicts
 With oop
 
-The Captcha:
+## The Captcha:
 You're standing in a room with "digitisation quarantine" written in LEDs along one wall. The only door is locked, but it includes a small interface. 
 
 "Restricted Area - Strictly No Digitised Users Allowed."
