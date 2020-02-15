@@ -1351,7 +1351,7 @@ for i in range(len(arr)):
 
 
 
-A List of Python Resources:
+[A List of Python Resources:][2]
 
 Beginners to programming
 Whirlwind Tour of Python 4.3k Nice only book that covers all the essential Python basics without overwhelming the Python novice.
@@ -1444,3 +1444,4 @@ https://www.youtube.com/watch?v=zJOS0sV2a24
 
 
 [1]: <https://hg.python.org/cpython/file/tip/Lib/antigravity.py> "Hobbit lifestyles"
+[2]: <https://forums.fast.ai/t/recommended-python-learning-resources/26888>
