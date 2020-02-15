@@ -22,7 +22,6 @@ Table of contents of the course:   (in progress)
 Installation python 3.8, PyCharm IDE.  
 Intro in the Python console, IDLE, PyCharm IDE.  
 Python basics: print hello world, work with variables, numbers (int, floats), strings , lists, tuples, dictionaries, loops (while, for ), functions,  read and write files to disks,  catch errors, import (internal and external packages), pip package manager, classes and objects, regex, internet sockets.  
-Indentation is important. Indented 4 spaces  
 
 <h2 id="Hello">Hello World</h2>
 
@@ -140,6 +139,7 @@ b = tmp;
 ```
 
 ## Boolean
+In python indentation is important. Indent 4 spaces.   
 ```python
 # Logical operators
 
