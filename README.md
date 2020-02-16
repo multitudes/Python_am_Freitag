@@ -1657,6 +1657,7 @@ https://pycoders.com/
 And curl! For windows! (check Cygwin
 https://curl.haxx.se/download.html
 
+[https://www.fast.ai/2019/12/02/nbdev/](https://www.fast.ai/2019/12/02/nbdev/)
 
 
 [1]: <https://hg.python.org/cpython/file/tip/Lib/antigravity.py> "Hobbit lifestyles"
