@@ -5,10 +5,12 @@ Introduction to Python. It is the material for a full week of course.
 Table of contents of the course:   (in progress)
 
 1.  [Installation](#Installation)  
-2.  [Basics](#Basics)  
+2.  [Basics](#Basics):  
    [Variables](#Variables), [Integers](#Integers), [Floats](#Floats), [Swapping values](#Swap), [Boolean](#Boolean), [Get Input](#Input), [String](#String), [String interpolation](#interpolation)  
-3. [Collections](#Collections)
-4. [Control Flow](#Flow)
+3. [Collections](#Collections). :
+   Lists, Dictionary, Tuples
+4. [Control Flow](#Flow):  
+   If-Elif-Else, While. 
 5. [Functions](#Functions)
 6. [Classes](#Classes)
 7. [Algorithms](#Algorithms)
