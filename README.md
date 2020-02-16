@@ -195,20 +195,12 @@ result = num1 + num2
 print(result)
 ```
 
-<h2 id="interpolation">String interpolation</h2> 
+## Strings
 
-```python
-print('Hello %s!' % ('world'))
-print('%s had %s pies.' % ('Alice', 42))
-```
-
-### Strings
 ```python
 print(“????")
-
 for i in range(4):
     print("?", end = “")
-
 print("?" * 4)
 ```
 
@@ -216,7 +208,6 @@ Question if I print 4 blocks vertically what is the syntax to get rid of the las
 ```python
 print(“#\n” * 4)
 ```
-
 Use the end terminator ""
 
 ```python
@@ -231,7 +222,15 @@ a = '''\    /\\
 
 print(a)
 ```
+<h3 id="interpolation">String interpolation</h3> 
+
+```python
+print('Hello %s!' % ('world'))
+print('%s had %s pies.' % ('Alice', 42))
+```
+
 ### Compare two strings
+
 ```python
 # Get two strings
 s = input("s: ")
@@ -242,6 +241,7 @@ if s == t:
 else:
     print(“different”)
 ```
+
 ## Collections
 ### Lists
 List is a kind of collection.A list can contain any other python object and Uses square brackets.  
