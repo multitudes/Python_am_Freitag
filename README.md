@@ -7,7 +7,7 @@ Table of contents of the course:   (in progress)
 1.  [Installation](#Installation)  
 2.  [Basics](#Basics)  
    [Variables](#Variables), [Integers](#Integers), [Floats](#Floats), [Swapping values](#Swap), [Boolean](#Boolean), [Get Input](#Input), [String](#String), [String interpolation](#interpolation)  
-3. 
+3. [Collections](#Collections)
 4. [Control Flow](#Flow)
 5. [Functions](#Functions)
 6. [Classes](#Classes)
@@ -237,8 +237,8 @@ if s == t:
 else:
     print(“different”)
 ```
-
-## Lists
+## Collections
+### Lists
 List is a kind of collection.A list can contain any other python object. Uses square brackets
 Can contain heterogeneous elements.
 Lists are mutable. Strings are immutable.
@@ -288,6 +288,108 @@ friends2 = friends.copy()
 a = ["a", "b", "c"]
 print(“'".join(a))
 ```
+
+## dictionary
+
+Single quote are necessary in dict for the keys
+
+No order! Imagine we use a look up tag! Init with dict()
+Key value pairs
+A common use is counting how many times we see something
+It is an error to reference a key which is not in the dict
+There is the “in” operator to check wether a key is in the dict 
+```python
+counts = {}
+pangram = "The quick brown fox jumps over the lazy dog"
+for letter in pangram:
+    if letter not in counts:
+        counts[letter] = 1
+    else:
+        counts[letter] = counts[letter] + 1
+print(counts)
+```
+Instead of checking if a key is already in the dic use get
+```python
+counts = {}
+pangram = "The quick brown fox jumps over the lazy dog"
+for letter in pangram:
+    counts[letter] = counts.get(letter, 0) + 1
+print(counts)
+```
+A for loop going through the keys
+```python
+for key in counts:
+    print(key, counts[key])
+```
+Items are tuples!
+```python
+print((counts.keys()))
+print((counts.values()))
+print((counts.items()))
+
+for (key, value) in counts.items():
+    print(key, value)
+
+high_letter = None
+high_count = None
+for letter, count in counts.items():
+    if letter == " ":
+        continue
+    if high_count == None or count > high_count:
+        high_letter = letter
+        high_count = count
+print("The highest letter count is :",(high_letter, high_count))
+```
+
+Simple exercise:
+```python
+from sys import exit
+people = {
+    "me": "123-123456",
+    "sarah": "321654987",
+    "marco": "654-64567987",
+    "David": "123-5558887"
+}
+if "David" in people:
+    print(f"\nFound {people['David']}")
+    exit(0)
+else:
+    print("\nNot Found")
+    exit(1)
+```
+
+Tuples
+Tuples are like lists, indexed at zero, can be iterated. Like strings are not modifiable.
+Tuples can be sorted. We can sort dictionary using the items() 
+```python
+y = (2,4,5,66)
+for i in y:
+    print(i)
+print((max(y)))
+
+(x,y) = (2, "Jo")
+print(y)
+
+print(sorted(counts.items()))
+```
+Sort by values. Create a list of tuples key value and invert and append
+```python
+tmp = list()
+for (key, value) in counts.items():
+    tmp.append((value, key))
+tmp = sorted(tmp)
+print(tmp)
+```
+Shortest !
+```python
+print(sorted([ (v,k) for k,v in counts.items() ]))
+```
+The ten top!
+```python
+for value, key in tmp[:10]:
+    print(key, value)
+```
+
 
 <h2 id="Flow">Control Flow</h2>
 #### Conditions 
@@ -487,107 +589,6 @@ email = words[1]
 email_pieces = email.split("@")
 ```
 
-
-## dictionary
-
-Single quote are necessary in dict for the keys
-
-No order! Imagine we use a look up tag! Init with dict()
-Key value pairs
-A common use is counting how many times we see something
-It is an error to reference a key which is not in the dict
-There is the “in” operator to check wether a key is in the dict 
-```python
-counts = {}
-pangram = "The quick brown fox jumps over the lazy dog"
-for letter in pangram:
-    if letter not in counts:
-        counts[letter] = 1
-    else:
-        counts[letter] = counts[letter] + 1
-print(counts)
-```
-Instead of checking if a key is already in the dic use get
-```python
-counts = {}
-pangram = "The quick brown fox jumps over the lazy dog"
-for letter in pangram:
-    counts[letter] = counts.get(letter, 0) + 1
-print(counts)
-```
-A for loop going through the keys
-```python
-for key in counts:
-    print(key, counts[key])
-```
-Items are tuples!
-```python
-print((counts.keys()))
-print((counts.values()))
-print((counts.items()))
-
-for (key, value) in counts.items():
-    print(key, value)
-
-high_letter = None
-high_count = None
-for letter, count in counts.items():
-    if letter == " ":
-        continue
-    if high_count == None or count > high_count:
-        high_letter = letter
-        high_count = count
-print("The highest letter count is :",(high_letter, high_count))
-```
-
-Simple exercise:
-```python
-from sys import exit
-people = {
-    "me": "123-123456",
-    "sarah": "321654987",
-    "marco": "654-64567987",
-    "David": "123-5558887"
-}
-if "David" in people:
-    print(f"\nFound {people['David']}")
-    exit(0)
-else:
-    print("\nNot Found")
-    exit(1)
-```
-
-Tuples
-Tuples are like lists, indexed at zero, can be iterated. Like strings are not modifiable.
-Tuples can be sorted. We can sort dictionary using the items() 
-```python
-y = (2,4,5,66)
-for i in y:
-    print(i)
-print((max(y)))
-
-(x,y) = (2, "Jo")
-print(y)
-
-print(sorted(counts.items()))
-```
-Sort by values. Create a list of tuples key value and invert and append
-```python
-tmp = list()
-for (key, value) in counts.items():
-    tmp.append((value, key))
-tmp = sorted(tmp)
-print(tmp)
-```
-Shortest !
-```python
-print(sorted([ (v,k) for k,v in counts.items() ]))
-```
-The ten top!
-```python
-for value, key in tmp[:10]:
-    print(key, value)
-```
 
 
 ## Functions 
