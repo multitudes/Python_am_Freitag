@@ -841,7 +841,7 @@ def run_test(questions):
         answer = input(question.prompt)
         if answer == question.answer:
             score += 1
-    print("you got a score of : " + str(score) + "/" +                      str(len(questions)) + " correct")
+    print("you got a score of : " + str(score) + "/" + str(len(questions)) + " correct")
 
 run_test(questions)
 ```
