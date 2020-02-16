@@ -1614,12 +1614,17 @@ https://curl.haxx.se/download.html
 
 ## Algorithms
 
-The big O. To compare algorithms, which one is better than other.
-Speed, and size with memory. Micro 10 to -6 and nano to -9
-For loops are slow!
-We compare how quickly the runtime grows not the actual time. In the first function it grows 
-proportionally to n + 1. For big numbers the “+1” is irrelevant so we just say O(n)
-Asymptotic analysis. In math describing limiting behaviour
+The big O. To compare algorithms, we ask, which one is better than other?  
+Considering speed and memory use.  
+For loops are slow!  
+We compare how quickly the runtime grows not the actual time.  
+In the first function it grows proportionally to n + 1. For big numbers the “+1” is irrelevant so we just say O(n).  
+We speak of asymptotic analysis. In math this is describing limiting behaviour of a function.
+
+#### Euler problem 1
+If we list all the natural numbers below 10 that are multiples of 3 or 5, we get 3, 5, 6 and 9. The sum of these multiples is 23.  
+Find the sum of all the multiples of 3 or 5 below 1000.  
+Two ways. One is O(n), the other O(1)!
 ```python
 def sum1(n):
     final_sum = 0
@@ -1635,7 +1640,7 @@ def sum2(n):
 print(f"{sum2(10):.0f}")
 ```
 
-Also check
+Also check:
 
 https://projekteuler.de
 
