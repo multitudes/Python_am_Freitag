@@ -15,7 +15,7 @@ Table of contents of the course:   (in progress)
 *   [String](#String)  
 *   [Boolean](#Boolean)  
 *   [String interpolation](#interpolation)  
-*   [Some Humor](#Some Humor)
+*   [Some Humor](#Some_Humor)
 
 ## Installation
 
@@ -1641,7 +1641,7 @@ https://projekteuler.de
 https://projecteuler.net/problem=1
 
 
-<h2 id="Some Humor">Some Humor</h2>
+<h2 id="Some_Humor">Some Humor</h2>
 
 https://www.xkcd.com/323/
 
