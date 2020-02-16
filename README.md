@@ -15,6 +15,7 @@ Table of contents of the course:   (in progress)
 *   [String](#String)  
 *   [Boolean](#Boolean)  
 *   [String interpolation](#interpolation)  
+*   [Algorithms](#Algorithms)
 *   [Some Humor](#Some_Humor)
 
 ## Installation
