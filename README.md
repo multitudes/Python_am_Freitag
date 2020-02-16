@@ -1640,7 +1640,8 @@ https://projekteuler.de
 
 https://projecteuler.net/problem=1
 
-## Some Humor
+
+<h2 id="Some Humor">Some Humor</h2>
 
 https://www.xkcd.com/323/
 
