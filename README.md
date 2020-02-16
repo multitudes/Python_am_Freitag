@@ -6,7 +6,7 @@ Table of contents of the course:   (in progress)
 
 1.  [Installation](#Installation)  
 2.  [Basics](#Basics):  
-   [Variables](#Variables), [Integers](#Integers), [Floats](#Floats), [Swapping values](#Swap), [Boolean](#Boolean), [Get Input](#Input), [String](#String), [String interpolation](#interpolation)  
+   [Variables](#Variables), [Integers](#Integers), [Floats](#Floats), [Swapping values](#Swap), [Boolean](#Boolean), [Get Input](#Input), [Strings](#Strings), [String interpolation](#interpolation)  
 3. [Collections](#Collections) :
    Lists, Dictionary, Tuples
 4. [Control Flow](#Flow):  
