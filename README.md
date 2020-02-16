@@ -178,6 +178,7 @@ elif s.lower() in ["n", "no"]:
 ```
 
 <h3 id="Input">Get Input</h3>
+
 Get input from the user:
 ```python
 name = input("Enter your name: ")
@@ -193,7 +194,8 @@ result = num1 + num2
 print(result)
 ```
 
-<h2 id="interpolation">String interpolation</h2>
+<h2 id="interpolation">String interpolation</h2> 
+
 ```python
 print('Hello %s!' % ('world'))
 print('%s had %s pies.' % ('Alice', 42))
@@ -241,13 +243,13 @@ else:
 ```
 ## Collections
 ### Lists
-List is a kind of collection.A list can contain any other python object. Uses square brackets
-Can contain heterogeneous elements.
-Lists are mutable. Strings are immutable.
-Lists can be concatenated with plus
-Range function returns a range of numbers excluding parameter. Range is an iterator in python3. Need to be converted to list
-Start with empty list.. the ‘in’ and ‘not in’ operator. There is a sort() method
-sorted() returns a new sorted list, leaving the original list unaffected. list.sort() sorts the list in-place, mutating the list indices, and returns None (like all in-place operations).
+List is a kind of collection.A list can contain any other python object and Uses square brackets.  
+It can contain heterogeneous elements.  
+Lists are mutable. Strings are immutable. Lists can be concatenated.  
+Range function returns a range of numbers excluding parameter. 
+Range is an iterator in python3. Need to be converted to list.  
+Start with empty list.. the ‘in’ and ‘not in’ operator. There is a sort() method.  
+sorted() returns a new sorted list, leaving the original list unaffected. list.sort() sorts the list in-place, mutating the list indices, and returns None (like all in-place operations).  
 
 ```python
 list()
