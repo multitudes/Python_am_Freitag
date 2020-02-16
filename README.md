@@ -6,7 +6,11 @@ Table of contents of the course:   (in progress)
 
 1.  [Installation](#Installation)  
 2.  [Basics](#Basics)  
-   [Variables](#Variables), [Integers](#Integers), [Floats](#Floats), [Swapping values](#Swap), [Boolean](#Boolean),[Get Input](#Input), [String](#String),[String interpolation](#interpolation)  
+   [Variables](#Variables), [Integers](#Integers), [Floats](#Floats), [Swapping values](#Swap), [Boolean](#Boolean), [Get Input](#Input), [String](#String), [String interpolation](#interpolation)  
+3. 
+4. [Control Flow](#Flow)
+5.
+6.
 7. [Algorithms](#Algorithms)
 8. [Some Humor](#Some_Humor)
 
@@ -171,8 +175,7 @@ elif s.lower() in ["n", "no"]:
     print(“no")
 ```
 
-### Input
-
+<h3 id="Input">Get Input</h3>
 Get input from the user:
 ```python
 name = input("Enter your name: ")
@@ -286,8 +289,7 @@ a = ["a", "b", "c"]
 print(“'".join(a))
 ```
 
-## Control Flow
-
+<h2 id="Flow">Control Flow</h2>
 #### Conditions 
 
 ```python
