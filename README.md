@@ -824,8 +824,65 @@ print(Employee.is_workday(my_date))
 
 # super useful help function to see inheritance from classes
 print(help(Dev))
+ 
+# Python has multiple inheritance! lets make a subclass and use super()__init__ when single inheritance or Employee.__init__(self,... )if multiple inheritance
+
+class Dev(Employee):
+    def __init__(self, first, last, pay, prog_lang):
+        super().__init__(first,last,pay)
+        self.prog_lang = prog_lang
+
+# and again a manager will manage a list of Employees. Do not init with a mutable empty list! Use None
+class Manager(Employee):
+    def __init__(self, first, last, pay, employees=None):
+        super().__init__(first,last,pay)
+        if employees == None:
+            self.employees = []
+        else:
+            self.employees = employees
+    def add_emp(self, emp):
+        if emp not in self.employees:
+            self.employees.append(emp)
+    def remove_emp(self, emp):
+        if emp in self.employees:
+            self.employees.remove(emp)
+    def print_emps(self):
+        for emp in self.employees:
+            print("---> ", emp.fullname())
+            
+emp1 = Employee('Corey', 'Schafer', 50000)
+mng2 = Manager('Ann', 'Smith', 90000,[emp1])
+mng2.print_emps()
+
+#is instance and is subclass
+print(isinstance(mng1, Manager))
+print(issubclass(Employee, Manager)) #false
+print(issubclass(Manager, Employee)) #true
 
 
+```
+#### Magic/Dunder Methods
+```python
+print(emp1) # prints <__main__.Employee object at 0x10c834850>
+
+#but __repr__ is used in the class to represent our object for debugging etc. Put this in the Employee class
+    def __repr__(self):
+        return "Employee('{}', '{}', '{}')".format(self.first, self.last,self.pay)
+    def __str__(self):
+        return '{} - {}'.format(self.fullname(), self.email)
+# and now run print(emp1) again..
+#also
+print(repr(emp1))
+print(str(emp1))
+
+#other magic or dunder methods is the addition, which in the background is
+print(int.__add__(1,2))
+print(str.__add__("1","2"))
+# add this in your class
+    def __add__(self, other):
+        return self.pay + other.pay
+# then you can add two classes.. this just for the sake of explaining
+print(emp1 + emp2)
 ```
 
 Exercise : create a Frage class… for Quiz
