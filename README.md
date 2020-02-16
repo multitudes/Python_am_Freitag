@@ -1536,56 +1536,6 @@ What is the solution to your captcha?
 
 https://adventofcode.com/2017/day/1
 
-
-## [A List of Python Resources:][2]
-
-* Beginners to programming  
-Whirlwind Tour of Python: Nice only book that covers all the essential Python basics without overwhelming the Python novice.  
-Learn Python the Hard Way: widely used book for learning Python as a first programming language
-Automate the boring stuff with Python by Al Sweigart: Contains a lot of scripts to make your boring task easier.  
-Python tutorials by Sentdex: This website contains everything related to python from beginner to advance level
-Python OOP’s tutorial by Corey Schafer: OOP concepts in python, which are extensively used in pytorch.  
-Real Python - A curated list of (long) blog posts on various aspects of Python programming from language fundamentals to advanced concepts, with applications along the way.  
-Udemy complete python bootcamp: Go from zero to hero in Python 3: (paid usually available for around $19) video and notebook based course that starts from the basics of Python and builds a few small milestone projects along the way.  
-Learn to Program with Python: (video course) Full multipart introduction to programming with python by Derek Banas (free).  
-Introducing Python - Excellent book with lots of examples, also introducing the python ecosystem and useful packages.  
-Solo Learn: This app is good for beginners and gives you the game like feeling.  
-Code academy: Good for beginners as it contains exercise also which will help you to learn quickly  
-Python - The No Theory Guide: Collection of Jupyter Notebooks that help you learn Python with hands-on Programming.  
-Introduction to Computer Science and Programming Using Python: This is a really good course, and recommended by a good number of folks from the Reddit Python community  
-* Intermediate programmers
-The Hitchhiker’s Guide to Python: a book on Python from Kenneth Reitz, the author of requests library. A comprehensive introduction into Python’s eco-system and best practices.  
-Peter Norvig’s Pytudes: a github repo that contains well-made jupyter notebooks, ranging in topics from Gesture Typing to A Concrete Introduction to Probability (using Python). These notebooks make for some great reads and the coding style is a good resource to learn from, especially in ways of breaking down problems in clear, readable code.  
-Design of Computer Programs also by Peter Norvig on Udacity is a great programming course in general, and has good introductions to comprehensions and generators.  
-Fluent Python: introduces the internals of python, helps you write more pythonic code.  
-Derek Banas - Python in one video : Ideal for people that have experience in some other programming language and want a quick tour of python.  
-Trey Hunner: Trey has done a lot of webcasts as well as written a lot of good article focusing on intermediate python developer.  
-Python tricks by Dan bader: This book contains a lot of tricks which will make you a great Pythonista, you can also follow dan’s personal website https://dbader.org/  to learn more about the python tips and tricks.  
-Google’s Python Class :Google’s Python Class is a short but great introduction to python for people who already know programming but are new to python. It is available both as video lectures and articles.  
-* Advanced programmers (but maybe new to python)
-Learn x in y minutes : quick overview of main Python 3 features entirely using code examples.  
-David Beazley’s courses, tutorials, and books: generators, yields, descriptors, and other advanced topics  
-Raymond Hettinger: If you want to master python skills then Raymond is the man, he has been a python core developer for many years and tend to give an advance talk.  
-* Python numeric programming (for people that know python already)
-Stanford numpy tutorial: great little intro to key python libs and concepts for numeric programming  
-Python Data Science Handbook (by Jake VanderPlas) - An introduction to the major scientific Python/“PyData” packages and best practices. (Being two years old it may be slightly dated (only slightly) at a few places in terms of the API used, but it’s still a great intro and reference.) [The author has generously made available the entire book as freely available notebooks; however the book can also be purchased 16 in print and electronic formats.]  
-Python for data science by wes mckinney(author of pandas): The author of pandas himself starts from basics and goes to advance features of pandas. In short great material to start learning pandas.  
-* Python challenges  
-https://codechalleng.es/challenges/  - It’s good if you are just starting with python  
-CheckIO  - Go on an (game) adventure by solving programming challenges with Python.  
-* Python podcast.  
-https://talkpython.fm/  - you will fall in love with python after watching this podcast. 
-https://pythonbytes.fm/  - This podcast will keep you updated about the python community and new.  
-* Python Newsletters  
-If you want to keep updated with the python articles, videos and more then subscribe to these channels  
-https://www.pythonweekly.com/
-https://importpython.com/newsletter/
-https://pycoders.com/ 
-
-And curl! For windows! (check Cygwin
-https://curl.haxx.se/download.html
-
-
 ## Algorithms
 
 The big O. To compare algorithms, we ask, which one is better than other?  
@@ -1659,6 +1609,53 @@ if __name__=='__main__':
     main()
 ```
 
+## [A List of Python Resources:][2]
+
+* Beginners to programming  
+Whirlwind Tour of Python: Nice only book that covers all the essential Python basics without overwhelming the Python novice.  
+Learn Python the Hard Way: widely used book for learning Python as a first programming language
+Automate the boring stuff with Python by Al Sweigart: Contains a lot of scripts to make your boring task easier.  
+Python tutorials by Sentdex: This website contains everything related to python from beginner to advance level
+Python OOP’s tutorial by Corey Schafer: OOP concepts in python, which are extensively used in pytorch.  
+Real Python - A curated list of (long) blog posts on various aspects of Python programming from language fundamentals to advanced concepts, with applications along the way.  
+Udemy complete python bootcamp: Go from zero to hero in Python 3: (paid usually available for around $19) video and notebook based course that starts from the basics of Python and builds a few small milestone projects along the way.  
+Learn to Program with Python: (video course) Full multipart introduction to programming with python by Derek Banas (free).  
+Introducing Python - Excellent book with lots of examples, also introducing the python ecosystem and useful packages.  
+Solo Learn: This app is good for beginners and gives you the game like feeling.  
+Code academy: Good for beginners as it contains exercise also which will help you to learn quickly  
+Python - The No Theory Guide: Collection of Jupyter Notebooks that help you learn Python with hands-on Programming.  
+Introduction to Computer Science and Programming Using Python: This is a really good course, and recommended by a good number of folks from the Reddit Python community  
+* Intermediate programmers
+The Hitchhiker’s Guide to Python: a book on Python from Kenneth Reitz, the author of requests library. A comprehensive introduction into Python’s eco-system and best practices.  
+Peter Norvig’s Pytudes: a github repo that contains well-made jupyter notebooks, ranging in topics from Gesture Typing to A Concrete Introduction to Probability (using Python). These notebooks make for some great reads and the coding style is a good resource to learn from, especially in ways of breaking down problems in clear, readable code.  
+Design of Computer Programs also by Peter Norvig on Udacity is a great programming course in general, and has good introductions to comprehensions and generators.  
+Fluent Python: introduces the internals of python, helps you write more pythonic code.  
+Derek Banas - Python in one video : Ideal for people that have experience in some other programming language and want a quick tour of python.  
+Trey Hunner: Trey has done a lot of webcasts as well as written a lot of good article focusing on intermediate python developer.  
+Python tricks by Dan bader: This book contains a lot of tricks which will make you a great Pythonista, you can also follow dan’s personal website https://dbader.org/  to learn more about the python tips and tricks.  
+Google’s Python Class :Google’s Python Class is a short but great introduction to python for people who already know programming but are new to python. It is available both as video lectures and articles.  
+* Advanced programmers (but maybe new to python)
+Learn x in y minutes : quick overview of main Python 3 features entirely using code examples.  
+David Beazley’s courses, tutorials, and books: generators, yields, descriptors, and other advanced topics  
+Raymond Hettinger: If you want to master python skills then Raymond is the man, he has been a python core developer for many years and tend to give an advance talk.  
+* Python numeric programming (for people that know python already)
+Stanford numpy tutorial: great little intro to key python libs and concepts for numeric programming  
+Python Data Science Handbook (by Jake VanderPlas) - An introduction to the major scientific Python/“PyData” packages and best practices. (Being two years old it may be slightly dated (only slightly) at a few places in terms of the API used, but it’s still a great intro and reference.) [The author has generously made available the entire book as freely available notebooks; however the book can also be purchased 16 in print and electronic formats.]  
+Python for data science by wes mckinney(author of pandas): The author of pandas himself starts from basics and goes to advance features of pandas. In short great material to start learning pandas.  
+* Python challenges  
+https://codechalleng.es/challenges/  - It’s good if you are just starting with python  
+CheckIO  - Go on an (game) adventure by solving programming challenges with Python.  
+* Python podcast.  
+https://talkpython.fm/  - you will fall in love with python after watching this podcast. 
+https://pythonbytes.fm/  - This podcast will keep you updated about the python community and new.  
+* Python Newsletters  
+If you want to keep updated with the python articles, videos and more then subscribe to these channels  
+https://www.pythonweekly.com/
+https://importpython.com/newsletter/
+https://pycoders.com/ 
+
+And curl! For windows! (check Cygwin
+https://curl.haxx.se/download.html
 
 
 
