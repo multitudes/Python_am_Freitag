@@ -5,7 +5,7 @@ Introduction to Python. It is the material for a full week of course.
 Table of contents of the course:   (in progress)
 
 *   [Installation](#Installation)  
-*   [Hello World](#Hello)  
+*   [Basics](#Basics)  
 *   [Variables](#Variables)  
 *   [Integers](#Integers)  
 *   [Floats](#Floats)  
@@ -23,7 +23,7 @@ Installation python 3.8, PyCharm IDE.
 Intro in the Python console, IDLE, PyCharm IDE.  
 Python basics: print hello world, work with variables, numbers (int, floats), strings , lists, tuples, dictionaries, loops (while, for ), functions,  read and write files to disks,  catch errors, import (internal and external packages), pip package manager, classes and objects, regex, internet sockets.  
 
-<h2 id="Hello">Hello World</h2>
+## Basics
 
 Make a new file called hello.py and run it in terminal and in pycharm.. and in interpreter.  
 ```python
@@ -897,6 +897,10 @@ The problem above is that the email is created initializing the instance with th
 ```
 If I want to set the first and last name in one go giving a string like 'Richard Smith' I use a setter like this. Different syntax using `@fullname.setter`:
 ```python
+    @property
+    def fullname(self):
+        return "{} {}".format(self.first, self.last)
+
     @fullname.setter
     def fullname(self,name):
         first, last = name.split(' ')
@@ -905,8 +909,20 @@ If I want to set the first and last name in one go giving a string like 'Richard
 # ex        
 emp1.fullname = 'Richard Smith'        
 ```
+There is a deleter too. So this will look like 
 
-Exercise : create a Frage class… for Quiz
+
+```python
+    @fullname.deleter
+    def fullname(self):
+        print("delete!")
+        self.first = None
+        self.last = None
+
+del emp1.fullname        
+```
+
+#### Exercise : create a Frage class… for Quiz
 
 ex:
 ```python
@@ -982,9 +998,41 @@ def get_positive_int(prompt):
 if __name__ == "__main__":
     main()
 ```
+#### Explanation of __main__
+It is the name of the first module run.
+When we run this file directly Python sets the value of __name__ to main
+if we import this file as a module in another file and run the code, it will set the name variable to the name of the module.
+In file first_module.py:
+```python
+print("First Module name: {}".format(__name__))
+# prints -> First Module name: __main__
+# and this variable can be used in the second module
+my_cat = "Tommy"
+```
+in second_module.py
+```python
+import first_module
+# run it and it will print
+# prints -> First Module name: first_module
+```
+To avoid exectting the Python file by import it then makes sense to execute the code only if running the file directly
+ex in the second module will:
+```python
+import first_module
 
+def main():
+    print(first_module.my_cat) # prints Tommy
 
-
+if __name__ =='__main__':
+    main()
+```    
+Another sanity check, change the first module to:
+```python
+if __name__ =='__main__':
+    print("run directly")
+else:
+    print("run from import")
+```    
 ## Command Line Arguments
 
 
