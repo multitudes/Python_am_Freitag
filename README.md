@@ -761,7 +761,28 @@ class PartyAnimal:
             print(self.name, 'I am deconstructed')
 ```
 
+```python
+class Employee:
+    def __init__(self, first, last, pay):
+        self.first = first
+        self.last = last
+        self.pay = pay
+        self.email = first + '.' + last + '@company.com'
 
+    def fullname(self):
+        return "{} {}".format(self.first, self.last)
+
+emp1 = Employee('Corey', 'Schafer', 50000)
+emp1.age = 30
+# check why self is needed in the method
+print(emp1.email)
+# print two variables with format
+print("{} {}".format(emp1.first, emp1.last))
+# both are the same
+print(emp1.fullname())
+print(Employee.fullname(emp1))
+
+```
 
 Exercise : create a Frage class… for Quiz
 
