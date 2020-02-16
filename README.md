@@ -744,11 +744,12 @@ student1 = Student(“jim","Business")
 print(student1)
 print(student1.name)
 print(Student)
+
 ```
 ## Constructor and deconstructor
 Destructor is seldom used. Constructor is optional. 
 ```python
-class PartyAnimal:
+class Student:
     x = 0
     name = ''
     def __init__(self, nam):
@@ -763,15 +764,25 @@ class PartyAnimal:
 
 ```python
 class Employee:
+
+    # equivalent of a static variable in python but can be adjusted in instamces as well!
+    raise_amount = 1.04
+    # this only static because in the init!
+    nums_of_empl = 0 
+    
     def __init__(self, first, last, pay):
         self.first = first
         self.last = last
         self.pay = pay
         self.email = first + '.' + last + '@company.com'
-
+        Employee.nums_of_empl += 1
+        
     def fullname(self):
         return "{} {}".format(self.first, self.last)
-
+    
+    def apply_rise(self):
+        self.pay = int(self.pay * self.raise_amount)
+        
 emp1 = Employee('Corey', 'Schafer', 50000)
 emp1.age = 30
 # check why self is needed in the method
@@ -781,6 +792,39 @@ print("{} {}".format(emp1.first, emp1.last))
 # both are the same
 print(emp1.fullname())
 print(Employee.fullname(emp1))
+# print content of an instance and a class. see the raise_amount is only in the class
+print(emp1.__dict__)
+print(Employee.raise_amount)
+
+# this is different in Python!
+# I change the instance raise_amount and it changes it only in the instance.
+# so the raise_amount is both static and attribute
+emp1.raise_amount = 2
+print(emp1.raise_amount)
+
+#also using the raise_amount in the class as self.raise_amount) or Employee.raise_amount makes a world of difference
+
+#class methods as alternate constructors. ex I want to construct an employee from string - add this to class
+    @classmethod # this is called a decorator
+    def from_string(cls, emp_string):
+        first, last, pay = emp_string.split('-')
+        return cls(first, last, pay)
+
+emp_str_1 = "john-doe-50000"
+new_emp1 = Employee.from_string(emp_str_1)  #this uses a class method returning an instance!
+#static methods do not take cls or self as param add to class with decorator staticmethod and import datetime 
+@staticmethod
+    def is_workday(day):
+        if day.weekday() == 5 or day.weekday == 6:
+            return False
+        return True
+
+my_date = datetime.date(2016,7,10)
+print(Employee.is_workday(my_date))
+
+# super useful help function to see inheritance from classes
+print(help(Dev))
+
 
 ```
 
