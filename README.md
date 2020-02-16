@@ -5,7 +5,7 @@ Introduction to Python. It is the material for a full week of course.
 Table of contents of the course:   (in progress)
 
 1.  [Installation](#Installation)  
-2.  [Basics](#Basics)
+2.  [Basics](#Basics)  
   * Variables
   * Numbers
   * [Variables](#Variables)  
