@@ -6,17 +6,7 @@ Table of contents of the course:   (in progress)
 
 1.  [Installation](#Installation)  
 2.  [Basics](#Basics)  
-   Variables
-   Numbers
-   [Variables](#Variables)  
-  * [Integers](#Integers)  
-  * [Floats](#Floats)  
-  * [Swapping values](#Swap)  
-  * [Boolean](#Boolean) 
-  * [Input](#Input)  
-  * [String](#String)  
-  * [Boolean](#Boolean)  
-  * [String interpolation](#interpolation)  
+   [Variables](#Variables), [Integers](#Integers), [Floats](#Floats), [Swapping values](#Swap), [Boolean](#Boolean),[Get Input](#Input), [String](#String),[String interpolation](#interpolation)  
 7. [Algorithms](#Algorithms)
 8. [Some Humor](#Some_Humor)
 
