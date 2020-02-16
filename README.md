@@ -67,7 +67,7 @@ print(planet.replace("world", "er"))
 ```
 
 
-## Variables 
+### Variables 
 Object in Speicher mit einem Name. Container. Named place in memory where a programmer can store data and later retrieve it with the name. Can be changed. You get to choose the name!
 In python muss mit Buchstabe oder unterstrich beginnen! Case sensitive. Letters, numbers and undescore.
 
@@ -102,7 +102,7 @@ print(bin(11))
 # convert bin 101 in decimal 
 print(int('102', 2))
 ```
-## Integers
+### Integers
 ```python
 age = int(input("Age: "))
 print(f"hello, you are at least {age * 365} days old\n")
@@ -120,8 +120,17 @@ print(f"x // y = {x // y}")
 print(f"x mod y = {x % y}”)
 ```
 
-## Floats
-in progress. 
+### Floats
+Floating point imprecision
+```python
+x = float(input("x: "))
+y = float(input("y: "))
+z = x / y
+# not integer overflow but floating point imprecision
+print(f"x / y = {z:.50f}")
+# print mit zero digits..
+print(f"{sum2(10):.0f}")
+```
 
 
 <h2 id="Swap">Swapping values in Python</h2>
@@ -144,7 +153,7 @@ a = b;
 b = tmp;
 ```
 
-## Boolean
+### Boolean
 In python indentation is important. Indent 4 spaces.   
 ```python
 # Logical operators
@@ -169,7 +178,7 @@ elif s.lower() in ["n", "no"]:
     print(“no")
 ```
 
-## Input
+### Input
 
 Get input from the user:
 ```python
@@ -192,7 +201,7 @@ print('Hello %s!' % ('world'))
 print('%s had %s pies.' % ('Alice', 42))
 ```
 
-#### Strings
+### Strings
 ```python
 print(“????")
 
@@ -221,7 +230,7 @@ a = '''\    /\\
 
 print(a)
 ```
-## Compare two strings
+### Compare two strings
 ```python
 # Get two strings
 s = input("s: ")
@@ -284,7 +293,9 @@ a = ["a", "b", "c"]
 print(“'".join(a))
 ```
 
-## Condition 
+## Control Flow
+
+#### Conditions 
 
 ```python
 # Prompt user for x
@@ -301,17 +312,16 @@ else:
 
 ```
 
-## Loops
-No do while loops in python!
+### Loops
+(No do while loops in python!)
 
-
-#### Opportunity for better design
+This give us opportunities for better design
 ```python
 print("hello")
 print("hello")
 print(“hello")
 ```
-#### Better design
+Better design:
 ```python
 for i in range(3):
     print("hello")
@@ -346,7 +356,7 @@ while True:
 print("Finished!")
 ```
 
-++++ Aufgabe ++++++++
+## ++++ Aufgabe ++++++++
 
 Ich habe diese message bekommen. Ich glaube es ist encrypted.
 “dlrow olleh”. Schreib ein Programm um diese art von Nachrichten zu entziffern
@@ -378,7 +388,7 @@ print('foo' in ‘f') # False
 print(‘hello'.find('oo')) #-1
 ```
 
-#### Comments 
+### Comments 
 ```python
 '''
 this is a comment
@@ -387,7 +397,9 @@ more comment
 # this too
 ```
 
-Tuple are immutable
+### Tuples are immutable
+Tuples are immutable
+
 ```python
 coordinates = (4, 5)
 coordinates[0] = 11
@@ -396,7 +408,7 @@ print(coordinates)
 ```
 
 
-++++++++++ exercise +++++++
+## ++++++++++ exercise +++++++
 ```python
 def raise_to_power(base, power):
     result = 1
@@ -410,7 +422,7 @@ print(raise_to_power(3, 5))
 ++++++++++++++++++++++++++++
 
 
-## Abstraction
+## Functions
 
 ```python
 def main():
@@ -423,7 +435,7 @@ if __name__ == "__main__":
     main()
 ```
 
-## Abstraction with parameterization
+## Functions with parameters
 ```python
 def main():
     hello(3)
@@ -435,7 +447,7 @@ if __name__ == "__main__":
     main()
 ```
 
-#### extravagant!
+#### extra
 ```python
 print("hello\n" * 3)
 ```
