@@ -14,7 +14,8 @@ Table of contents of the course:   (in progress)
 5. [Functions](#Functions)
 6. [Classes](#Classes)
 7. [Algorithms](#Algorithms)
-8. [Some Humor](#Some_Humor)
+8. [Exercises](#Exercices)
+9. [Some Humor](#Some_Humor)
 
 ## Installation
 
@@ -1534,28 +1535,6 @@ What is the solution to your captcha?
 
 https://adventofcode.com/2017/day/1
 
-## Bubble
-Python program for implementation of Bubble Sort
-```python
-def bubbleSort(arr):
-    n = len(arr)
-    # Traverse through all array elements
-    for i in range(n):
-        # Last i elements are already in place
-        for j in range(0, n - i - 1):
-            # traverse the array from 0 to n-i-1
-            # Swap if the element found is greater
-            # than the next element
-            if arr[j] > arr[j + 1]:
-                arr[j], arr[j + 1] = arr[j + 1], arr[j]
-# Driver code to test above
-arr = [64, 34, 25, 12, 22, 11, 90]
-bubbleSort(arr)
-print("Sorted array is:")
-for i in range(len(arr)):
-    print("%d" % (arr[i]), end=", ")
-```
-
 
 ## [A List of Python Resources:][2]
 
@@ -1632,6 +1611,27 @@ def sum2(n):
     return n * (n + 1) / 2
 
 print(f"{sum2(10):.0f}")
+```
+## Bubble
+Python program for implementation of Bubble Sort
+```python
+def bubbleSort(arr):
+    n = len(arr)
+    # Traverse through all array elements
+    for i in range(n):
+        # Last i elements are already in place
+        for j in range(0, n - i - 1):
+            # traverse the array from 0 to n-i-1
+            # Swap if the element found is greater
+            # than the next element
+            if arr[j] > arr[j + 1]:
+                arr[j], arr[j + 1] = arr[j + 1], arr[j]
+# Driver code to test above
+arr = [64, 34, 25, 12, 22, 11, 90]
+bubbleSort(arr)
+print("Sorted array is:")
+for i in range(len(arr)):
+    print("%d" % (arr[i]), end=", ")
 ```
 
 Also check:
