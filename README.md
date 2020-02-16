@@ -97,6 +97,10 @@ my_math = -5
 print(sqrt(36))
 print(floor(5.4))
 print(ceil(5.4))
+# convert into bin
+print(bin(11))
+# convert bin 101 in decimal 
+print(int('102', 2))
 ```
 ## Integers
 ```python
@@ -883,6 +887,23 @@ print(str.__add__("1","2"))
         return self.pay + other.pay
 # then you can add two classes.. this just for the sake of explaining
 print(emp1 + emp2)
+```
+#### Property Decorators - Getters, Setters, and Deleters
+The problem above is that the email is created initializing the instance with the name but then if the name changes the email doesnt change . for this we use property decorators. remove the email from the class and add it as method with the decorator property. This will help to keep using the existing code. Without decorator I would need to use the email() method. With @property I can just do `emp1.email` 
+```python
+    @property
+    def email(self):
+        return "{}.{}@company.com".format(self.first, self.last)
+```
+If I want to set the first and last name in one go giving a string like 'Richard Smith' I use a setter like this. Different syntax using `@fullname.setter`:
+```python
+    @fullname.setter
+    def fullname(self,name):
+        first, last = name.split(' ')
+        self.first = first
+        self.last = last
+# ex        
+emp1.fullname = 'Richard Smith'        
 ```
 
 Exercise : create a Frage class… for Quiz
