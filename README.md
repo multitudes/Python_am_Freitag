@@ -9,8 +9,8 @@ Table of contents of the course:   (in progress)
    [Variables](#Variables), [Integers](#Integers), [Floats](#Floats), [Swapping values](#Swap), [Boolean](#Boolean), [Get Input](#Input), [String](#String), [String interpolation](#interpolation)  
 3. 
 4. [Control Flow](#Flow)
-5.
-6.
+5. [Functions](#Functions)
+6. [Classes](#Classes)
 7. [Algorithms](#Algorithms)
 8. [Some Humor](#Some_Humor)
 
@@ -416,32 +416,6 @@ print(raise_to_power(3, 5))
 ```
 ++++++++++++++++++++++++++++
 
-
-## Functions
-
-```python
-def main():
-    for i in range(3):
-        hello()
-def hello():
-    """hello once"""
-    print(“hello")
-if __name__ == "__main__":
-    main()
-```
-
-## Functions with parameters
-```python
-def main():
-    hello(3)
-def hello(n):
-    """hello some number of times"""
-    for i in range(n):
-        print("hello")
-if __name__ == "__main__":
-    main()
-```
-
 #### extra
 ```python
 print("hello\n" * 3)
@@ -660,6 +634,27 @@ print((translate("giraffe")))
 print((translate(input("\n enter name: "))))
 ```
 
+```python
+def main():
+    for i in range(3):
+        hello()
+def hello():
+    """hello once"""
+    print(“hello")
+if __name__ == "__main__":
+    main()
+```
+
+```python
+def main():
+    hello(3)
+def hello(n):
+    """hello some number of times"""
+    for i in range(n):
+        print("hello")
+if __name__ == "__main__":
+    main()
+```
 ## Try and except
 Basic:
 ```python
