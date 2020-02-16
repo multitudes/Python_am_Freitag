@@ -5,21 +5,20 @@ Introduction to Python. It is the material for a full week of course.
 Table of contents of the course:   (in progress)
 
 1.  [Installation](#Installation)  
-2.  [Basics](#Basics)  
-  * Variables.  
+2.  [Basics](#Basics)
+  * Variables
   * Numbers
-  
-*   [Variables](#Variables)  
-*   [Integers](#Integers)  
-*   [Floats](#Floats)  
-*   [Swapping values](#Swap)  
-*   [Boolean](#Boolean) 
-*   [Input](#Input)  
-*   [String](#String)  
-*   [Boolean](#Boolean)  
-*   [String interpolation](#interpolation)  
-*   [Algorithms](#Algorithms)
-*   [Some Humor](#Some_Humor)
+  * [Variables](#Variables)  
+  * [Integers](#Integers)  
+  * [Floats](#Floats)  
+  * [Swapping values](#Swap)  
+  * [Boolean](#Boolean) 
+  * [Input](#Input)  
+  * [String](#String)  
+  * [Boolean](#Boolean)  
+  * [String interpolation](#interpolation)  
+7. [Algorithms](#Algorithms)
+8. [Some Humor](#Some_Humor)
 
 ## Installation
 
