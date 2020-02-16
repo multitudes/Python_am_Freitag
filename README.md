@@ -44,6 +44,8 @@ Another option is formatting the output. The syntax is:
 ```python
 answer = input("Name: ")
 print(f"hello, {answer}")
+# or print two variables with format. Automatically will keep the order of what to put in the brackets
+print("{} {}".format(emp1.first, emp1.last))
 
 planet = "world"
 print("hello " + planet + "!")
