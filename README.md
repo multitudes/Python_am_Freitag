@@ -17,7 +17,7 @@ Table of contents of the course:
 7. [Command Line Arguments](#Command)
 8. [Classes](#Classes)
 9. [Regular Expressions](#re)  
-10.[Websockets and Web Requests](#sockets)  
+10. [Websockets and Web Requests](#sockets)  
 11. [Algorithms](#Algorithms)  
 12. [Exercises](#Exercises)  
 13. [Some Humor](#Some_Humor)  
