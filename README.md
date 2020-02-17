@@ -15,6 +15,7 @@ Table of contents of the course:   (in progress)
 6. [Read and write I/O](#io)
 6. [Command Line Arguments](#Command)
 6. [Classes](#Classes)
+9. [Regular Expressions](#re)
 7. [Algorithms](#Algorithms)
 8. [Exercises](#Exercices)
 9. [Some Humor](#Some_Humor)
@@ -23,7 +24,6 @@ Table of contents of the course:   (in progress)
 
 Installation python 3.8, PyCharm IDE.  
 Intro in the Python console, IDLE, PyCharm IDE.  
-Python basics: print hello world, work with variables, numbers (int, floats), strings , lists, tuples, dictionaries, loops (while, for ), functions,  read and write files to disks,  catch errors, import (internal and external packages), pip package manager, classes and objects, regex, internet sockets.  
 
 ## Basics
 
@@ -417,6 +417,14 @@ The ten top!
 for value, key in tmp[:10]:
     print(key, value)
 ```
+Tuples are immutable
+
+```python
+coordinates = (4, 5)
+coordinates[0] = 11
+# no changes supported in tuples they are immutable
+print(coordinates)
+```
 
 
 <h2 id="Flow">Control Flow</h2>
@@ -482,16 +490,6 @@ while True:
 print("Finished!")
 ```
 
-
-### Tuples are immutable
-Tuples are immutable
-
-```python
-coordinates = (4, 5)
-coordinates[0] = 11
-# no changes supported in tuples they are immutable
-print(coordinates)
-```
 
 ## Integer overflow!
 ```python
@@ -1066,10 +1064,11 @@ else:
     exit(1)
 ```
 
-## Regular expression
-See the quick guide
+<h2 id = "re">Regular expression</h2>
+
+(See the quick guide in the folder)
 Need to import re, re.search() to match re.findall() to extract
-Start with 
+Start with :
 ```python
 # Check answer
 s = input("Do you agree? \n")
@@ -1288,6 +1287,7 @@ def unload():
 ```
 
 ## Speller
+This is an example of a more advanced exercise, creating a dictionary to check the spelling of words.
 ```python
 import re
 import sys
@@ -1439,7 +1439,7 @@ sys.exit(0)
 ```
 
 ## Pillow
-
+(Need the Pillow module that can be eventually troublesome to install on some systems)
 This is the blur effect
 ```
 from PIL import Image, ImageFilter
