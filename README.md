@@ -176,7 +176,7 @@ a = b;
 b = tmp;
 ```
 
-### Boolean
+### Booleans
 
 In python indentation is important. Indent 4 spaces.  
 
