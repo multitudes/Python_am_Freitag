@@ -26,6 +26,7 @@ Python basics: print hello world, work with variables, numbers (int, floats), st
 
 ## Basics
 
+### Hello World
 Make a new file called hello.py and run it in terminal and in pycharm.. and in interpreter.  
 ```python
 print("hello, world”)
@@ -35,7 +36,9 @@ print("hello, world”)
 Python does not need curly braces, semicolons or to imports main etc.   
 It works out of the box.   
 
-Different ways to print. We need no space after the hello if we use the comma variant.  
+### Formatting print()
+
+Different ways to print on the console. We need no space after the hello if we use the comma variant.  
 ```python
 answer = input("Name: ")
 print("hello,", answer)
@@ -198,7 +201,7 @@ result = num1 + num2
 print(result)
 ```
 
-## Strings
+### Strings
 
 ```python
 print(“????")
@@ -211,7 +214,7 @@ Question if I print 4 blocks vertically what is the syntax to get rid of the las
 ```python
 print(“#\n” * 4)
 ```
-Use the end terminator ""
+Answer, use the end terminator ""
 
 ```python
 print("#\n" * 4, end=“")
@@ -401,7 +404,7 @@ for value, key in tmp[:10]:
 
 <h2 id="Flow">Control Flow</h2>
 
-#### Conditions 
+### If Elif Else  
 
 ```python
 # Prompt user for x
@@ -461,39 +464,6 @@ while True:
         print("Line: ", line)
 print("Finished!")
 ```
-
-## ++++ Aufgabe ++++++++
-
-Ich habe diese message bekommen. Ich glaube es ist encrypted.
-“dlrow olleh”. Schreib ein Programm um diese art von Nachrichten zu entziffern
-
-
-#### Reverse Cipher
-```python
-message = 'Three can keep a secret, if two of them are dead.'
-translated = ''
-i = len(message) - 1
-while i >= 0:
-    translated = translated + message[i]
-    i = i - 1
-print(translated)
-```
-+++++++++++++++++++++++++++++
-
-#### Practice -  what does this code prints?
-```python
-spam = 'foo'
-for i in spam:
-    spam = spam + i
-print(spam)
-
-print('f' not in ‘foo') # False
-
-print('foo' in ‘f') # False
-
-print(‘hello'.find('oo')) #-1
-```
-
 ### Comments 
 ```python
 '''
@@ -511,35 +481,6 @@ coordinates = (4, 5)
 coordinates[0] = 11
 # no changes supported in tuples they are immutable
 print(coordinates)
-```
-
-
-## ++++++++++ exercise +++++++
-```python
-def raise_to_power(base, power):
-    result = 1
-    for index in range(power):
-        result = result * base
-    return result
-
-print(raise_to_power(3, 4))
-print(raise_to_power(3, 5))
-```
-++++++++++++++++++++++++++++
-
-#### extra
-```python
-print("hello\n" * 3)
-```
-
-
-## Print out this many rows
-```python
-for i in range(4):
-    # Print out this many columns
-    for j in range(4):
-        print("#", end="")
-    print()
 ```
 
 ## Integer overflow!
@@ -1485,6 +1426,63 @@ after.save("out.png")
 
 ## Exercises
 
+
+
+## ++++ Aufgabe ++++++++
+
+Ich habe diese message bekommen. Ich glaube es ist encrypted.
+“dlrow olleh”. Schreib ein Programm um diese art von Nachrichten zu entziffern
+
+
+#### Reverse Cipher
+```python
+message = 'dlrow olleh'
+translated = ''
+i = len(message) - 1
+while i >= 0:
+    translated = translated + message[i]
+    i = i - 1
+print(translated)
+```
++++++++++++++++++++++++++++++
+
+#### Practice -  what does this code prints?
+```python
+spam = 'foo'
+for i in spam:
+    spam = spam + i
+print(spam)
+
+print('f' not in ‘foo') # False
+
+print('foo' in ‘f') # False
+
+print(‘hello'.find('oo')) #-1
+```
+
+## ++++++++++ exercise +++++++
+```python
+def raise_to_power(base, power):
+    result = 1
+    for index in range(power):
+        result = result * base
+    return result
+
+print(raise_to_power(3, 4))
+print(raise_to_power(3, 5))
+```
+
+
+## Print out a block
+```python
+for i in range(4):
+    # Print out this many columns
+    for j in range(4):
+        print("#", end="")
+    print()
+```
+
+
 Look at the CS50 problems like: 
 mario/ cash / credit cards/cesar / crack / vigenere / bleep
 
@@ -1515,12 +1513,11 @@ for i in range(n):
 ```
 Print a cat
 
-Three Questions Quiz
-Can be done in many different ways, 
-with if statements. 
-With reading from file
-With lists / dicts
-With oop
+A Three Questions Quiz game. It can be done in many different ways, 
+* with if statements. 
+* With reading from file
+* With lists / dicts
+* With oop
 
 ## The Captcha:
 You're standing in a room with "digitisation quarantine" written in LEDs along one wall. The only door is locked, but it includes a small interface. 
