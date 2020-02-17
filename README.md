@@ -1453,8 +1453,7 @@ if __name__=='__main__':
 
 <h2 id = "resources">A List of Python Resources</h2>
 
-[See this link:][2]
-
+[FastAI forums: Recommended Python learning resources][2]
 
 * Beginners to programming  
 Whirlwind Tour of Python: Nice only book that covers all the essential Python basics without overwhelming the Python novice.  
