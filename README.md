@@ -10,19 +10,18 @@ Table of contents of the course:
 1.  [Installation](#Installation)  
 2.  [Basics](#Basics):  
    [Variables](#Variables), [Integers](#Integers), [Floats](#Floats), [Swapping values](#Swap), [Booleans](#Booleans), [Get Input](#Input), [Strings](#Strings), [String interpolation](#interpolation)  
-3. [Collections](#Collections) :
-   Lists, Dictionary, Tuples
-4. [Control Flow](#Flow):  
-   If-Elif-Else, While. 
+3. [Collections](#Collections)
+4. [Control Flow](#Flow)
 5. [Functions](#Functions)
 6. [Read and write I/O](#io)
-6. [Command Line Arguments](#Command)
-6. [Classes](#Classes)
+7. [Command Line Arguments](#Command)
+8. [Classes](#Classes)
 9. [Regular Expressions](#re)
 10.[Websockets and Web Requests](#sockets)
-7. [Algorithms](#Algorithms)
-8. [Exercises](#Exercises)
-9. [Some Humor](#Some_Humor)
+11. [Algorithms](#Algorithms)
+12. [Exercises](#Exercises)
+13. [Some Humor](#Some_Humor)
+14. [A List of Python Resources](resources)
 
 
 ## Installation
