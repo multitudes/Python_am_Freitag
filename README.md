@@ -153,7 +153,9 @@ print(f"{sum2(10):.0f}")
 
 
 <h3 id="Swap">Swapping values in Python</h3>
-In Python it is very easy to swap two values like the below example with two ints
+
+In Python it is very easy to swap two values like the below example with two ints:
+
 ```python
 # Swaps two integers
 x = 1
@@ -162,7 +164,9 @@ print(f"x is {x}, y is {y}")
 x, y = y, x
 print(f"x is {x}, y is {y}”)
 ```
+
 In c for comparison:
+
 ```c
 int a = 1;
 int b = 2;
