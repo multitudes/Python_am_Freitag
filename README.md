@@ -627,6 +627,61 @@ def hello(n):
 if __name__ == "__main__":
     main()
 ```
+
+
+## Get positive int
+
+In Python the scope of a variable is the whole function
+```python
+def main():
+    i = get_positive_int("Positive integer: ")
+    print(i)
+def get_positive_int(prompt):
+    """Prompt user for positive integer"""
+    while True:
+        n = get_int(prompt)
+        if n > 0:
+            break
+    return n
+if __name__ == "__main__":
+    main()
+```
+#### Explanation of __main__
+It is the name of the first module run.
+When we run this file directly Python sets the value of __name__ to main
+if we import this file as a module in another file and run the code, it will set the name variable to the name of the module.
+In file first_module.py:
+```python
+print("First Module name: {}".format(__name__))
+# prints -> First Module name: __main__
+# and this variable can be used in the second module
+my_cat = "Tommy"
+```
+in second_module.py
+```python
+import first_module
+# run it and it will print
+# prints -> First Module name: first_module
+```
+To avoid exectting the Python file by import it then makes sense to execute the code only if running the file directly
+ex in the second module will:
+```python
+import first_module
+
+def main():
+    print(first_module.my_cat) # prints Tommy
+
+if __name__ =='__main__':
+    main()
+```    
+Another sanity check, change the first module to:
+```python
+if __name__ =='__main__':
+    print("run directly")
+else:
+    print("run from import")
+```    
+
 ## Try and except
 Basic:
 ```python
@@ -975,60 +1030,6 @@ myChineseChef.make_fried_rice()
 myChineseChef.make_special()
 myChineseChef.make_chicken()
 ```
-
-
-## Get positive int
-
-In Python the scope of a variable is the whole function
-```python
-def main():
-    i = get_positive_int("Positive integer: ")
-    print(i)
-def get_positive_int(prompt):
-    """Prompt user for positive integer"""
-    while True:
-        n = get_int(prompt)
-        if n > 0:
-            break
-    return n
-if __name__ == "__main__":
-    main()
-```
-#### Explanation of __main__
-It is the name of the first module run.
-When we run this file directly Python sets the value of __name__ to main
-if we import this file as a module in another file and run the code, it will set the name variable to the name of the module.
-In file first_module.py:
-```python
-print("First Module name: {}".format(__name__))
-# prints -> First Module name: __main__
-# and this variable can be used in the second module
-my_cat = "Tommy"
-```
-in second_module.py
-```python
-import first_module
-# run it and it will print
-# prints -> First Module name: first_module
-```
-To avoid exectting the Python file by import it then makes sense to execute the code only if running the file directly
-ex in the second module will:
-```python
-import first_module
-
-def main():
-    print(first_module.my_cat) # prints Tommy
-
-if __name__ =='__main__':
-    main()
-```    
-Another sanity check, change the first module to:
-```python
-if __name__ =='__main__':
-    print("run directly")
-else:
-    print("run from import")
-```    
 
 <h2 id = "Command">Command Line Arguments</h2>
 
