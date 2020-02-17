@@ -9,7 +9,7 @@ Table of contents of the course:
 
 1.  [Installation](#Installation)  
 2.  [Basics](#Basics):  
-   [Variables](#Variables), [Integers](#Integers), [Floats](#Floats), [Swapping values](#Swap), [Booleans](#Booleans), [Get Input](#Input), [Strings](#Strings), [String interpolation](#interpolation)  
+   [Variables](#Variables), [Integers](#Integers), [Floats](#Floats), [Swapping values](#Swap), [Booleans](#Booleans), [Get Input](#Input) 
 3. [Collections](#Collections)
 4. [Control Flow](#Flow)
 5. [Functions](#Functions)
@@ -80,6 +80,42 @@ print('foo' in ‘f') # False
 print(‘hello'.find('oo')) #-1
 
 ```
+
+
+### Strings
+
+```python
+print(“????")
+for i in range(4):
+    print("?", end = “")
+print("?" * 4)
+```
+
+Question if I print 4 blocks vertically what is the syntax to get rid of the last \n?
+```python
+print(“#\n” * 4)
+```
+Answer, use the end terminator ""
+
+```python
+print("#\n" * 4, end=“")
+```
+Print a cat 
+```python
+a = '''\    /\\
+ )  ( ')
+(  /  )
+ \(__)|'''
+
+print(a)
+```
+String interpolation<
+
+```python
+print('Hello %s!' % ('world'))
+print('%s had %s pies.' % ('Alice', 42))
+```
+
 ### Comments in python
 
 ```python
@@ -220,53 +256,6 @@ num1 = input("Enter a number : ")
 num2 = input("Enter a number : ")
 result = num1 + num2
 print(result)
-```
-
-### Strings
-
-```python
-print(“????")
-for i in range(4):
-    print("?", end = “")
-print("?" * 4)
-```
-
-Question if I print 4 blocks vertically what is the syntax to get rid of the last \n?
-```python
-print(“#\n” * 4)
-```
-Answer, use the end terminator ""
-
-```python
-print("#\n" * 4, end=“")
-```
-Print a cat 
-```python
-a = '''\    /\\
- )  ( ')
-(  /  )
- \(__)|'''
-
-print(a)
-```
-<h3 id="interpolation">String interpolation</h3> 
-
-```python
-print('Hello %s!' % ('world'))
-print('%s had %s pies.' % ('Alice', 42))
-```
-
-### Compare two strings
-
-```python
-# Get two strings
-s = input("s: ")
-t = input("t: ")
-# Compare strings for equality
-if s == t:
-    print("same")
-else:
-    print(“different”)
 ```
 
 ## Collections
@@ -446,6 +435,19 @@ elif x > y:
 else:
     print("x is equal to y")
 
+```
+
+Compare two strings is easy in Python:
+
+```python
+# Get two strings
+s = input("s: ")
+t = input("t: ")
+# Compare strings for equality
+if s == t:
+    print("same")
+else:
+    print(“different”)
 ```
 
 ### Loops
