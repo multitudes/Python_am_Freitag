@@ -6,7 +6,7 @@ Table of contents of the course:   (in progress)
 
 1.  [Installation](#Installation)  
 2.  [Basics](#Basics):  
-   [Variables](#Variables), [Integers](#Integers), [Floats](#Floats), [Swapping values](#Swap), [Booleans](#Boolean), [Get Input](#Input), [Strings](#Strings), [String interpolation](#interpolation)  
+   [Variables](#Variables), [Integers](#Integers), [Floats](#Floats), [Swapping values](#Swap), [Booleans](#Booleans), [Get Input](#Input), [Strings](#Strings), [String interpolation](#interpolation)  
 3. [Collections](#Collections) :
    Lists, Dictionary, Tuples
 4. [Control Flow](#Flow):  
@@ -69,8 +69,15 @@ print(planet[0])
 
 print(planet.index("w"))
 print(planet.replace("world", "er"))
+print('f' not in ‘foo') # False
+
+print('foo' in ‘f') # False
+
+print(‘hello'.find('oo')) #-1
+
 ```
 ### Comments in python
+
 ```python
 '''
 this is a comment
@@ -541,6 +548,7 @@ email_pieces = email.split("@")
 
 
 ## Functions 
+
 ```python
 def say_hi() :
     print("Hello")
@@ -568,6 +576,18 @@ def cube(num):
 
 a = cube(2)
 print(a)
+```
+
+
+```python
+def raise_to_power(base, power):
+    result = 1
+    for index in range(power):
+        result = result * base
+    return result
+
+print(raise_to_power(3, 4))
+print(raise_to_power(3, 5))
 ```
 Replace vowels or letters
 ```python
@@ -1427,13 +1447,8 @@ after.save("out.png")
 
 ## Exercises
 
-
-
-## ++++ Aufgabe ++++++++
-
 Ich habe diese message bekommen. Ich glaube es ist encrypted.
 “dlrow olleh”. Schreib ein Programm um diese art von Nachrichten zu entziffern
-
 
 #### Reverse Cipher
 ```python
@@ -1445,34 +1460,6 @@ while i >= 0:
     i = i - 1
 print(translated)
 ```
-+++++++++++++++++++++++++++++
-
-#### Practice -  what does this code prints?
-```python
-spam = 'foo'
-for i in spam:
-    spam = spam + i
-print(spam)
-
-print('f' not in ‘foo') # False
-
-print('foo' in ‘f') # False
-
-print(‘hello'.find('oo')) #-1
-```
-
-## ++++++++++ exercise +++++++
-```python
-def raise_to_power(base, power):
-    result = 1
-    for index in range(power):
-        result = result * base
-    return result
-
-print(raise_to_power(3, 4))
-print(raise_to_power(3, 5))
-```
-
 
 ## Print out a block
 ```python
