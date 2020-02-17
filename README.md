@@ -9,7 +9,7 @@ Table of contents of the course:
 
 1.  [Installation](#Installation)  
 2.  [Basics](#Basics):  
-   [Variables](#Variables), [Strings](#Strings), [Integers](#Integers), [Floats](#Floats), [Swapping values](#Swap), [Booleans](#Booleans)
+   [Variables](#Variables), [Strings](#Strings), [Integers](#Integers), [Floats](#Floats), [Booleans](#Booleans)
 3. [Collections](#Collections)
 4. [Control Flow](#Flow)
 5. [Functions](#Functions)
