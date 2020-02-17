@@ -12,6 +12,7 @@ Table of contents of the course:   (in progress)
 4. [Control Flow](#Flow):  
    If-Elif-Else, While. 
 5. [Functions](#Functions)
+6. [Read and write I/O](#io)
 6. [Command Line Arguments](#Command)
 6. [Classes](#Classes)
 7. [Algorithms](#Algorithms)
@@ -69,7 +70,14 @@ print(planet[0])
 print(planet.index("w"))
 print(planet.replace("world", "er"))
 ```
-
+### Comments in python
+```python
+'''
+this is a comment
+more comment
+'''
+# this too
+```
 
 ### Variables 
 Object in Speicher mit einem Name. Container. Named place in memory where a programmer can store data and later retrieve it with the name. Can be changed. You get to choose the name!
@@ -300,15 +308,13 @@ a = ["a", "b", "c"]
 print(“'".join(a))
 ```
 
-## dictionary
+## Dictionary
 
-Single quote are necessary in dict for the keys
-
-No order! Imagine we use a look up tag! Init with dict()
-Key value pairs
-A common use is counting how many times we see something
-It is an error to reference a key which is not in the dict
-There is the “in” operator to check wether a key is in the dict 
+Dictionaries are not ordered! Imagine we use a look up tag! Init with dict()
+Key value pairs. Single quotes are necessary in dict for the keys
+A common use of dictionaries is counting how many times we see a value. Ex the frequency of words in a text.  
+It is an error to reference a key which is not in the dict.
+We use the in operator to check wether a key is in the dict:   
 ```python
 counts = {}
 pangram = "The quick brown fox jumps over the lazy dog"
@@ -319,7 +325,7 @@ for letter in pangram:
         counts[letter] = counts[letter] + 1
 print(counts)
 ```
-Instead of checking if a key is already in the dic use get
+Better: Instead of checking if a key is already in the dic use the get methode with a default
 ```python
 counts = {}
 pangram = "The quick brown fox jumps over the lazy dog"
@@ -327,12 +333,12 @@ for letter in pangram:
     counts[letter] = counts.get(letter, 0) + 1
 print(counts)
 ```
-A for loop going through the keys
+We can loop through the keys:  
 ```python
 for key in counts:
     print(key, counts[key])
 ```
-Items are tuples!
+Items in the dict are (key, values) tuples !
 ```python
 print((counts.keys()))
 print((counts.values()))
@@ -369,7 +375,7 @@ else:
     exit(1)
 ```
 
-Tuples
+#### Tuples
 Tuples are like lists, indexed at zero, can be iterated. Like strings are not modifiable.
 Tuples can be sorted. We can sort dictionary using the items() 
 ```python
@@ -464,14 +470,7 @@ while True:
         print("Line: ", line)
 print("Finished!")
 ```
-### Comments 
-```python
-'''
-this is a comment
-more comment
-'''
-# this too
-```
+
 
 ### Tuples are immutable
 Tuples are immutable
@@ -630,9 +629,31 @@ except ZeroDivisionError as err:
 except ValueError:
     print("invalid input”)
 ```
-## Read and write io
+
+
+<h2 id = "io">Read and write I/O</h2>
+
 Opening a file. The open() function returns a file handle
 .read() is the whole string!
+
+```python
+import csv
+file = open("notebook.csv", "a")
+name = input("name ")
+phone = input("phone ")
+writer = csv.writer(file)
+writer.writerow((name, phone))
+file.close()
+```
+or
+```python
+import csv
+name = input("name ")
+phone = input("phone ")
+with open("notebook.csv", "a") as file:
+    writer = csv.writer(file)
+    writer.writerow((name, phone))
+```
 Use the mbox file:
 ```python
 fhand = open('mbox-short.txt')
@@ -1021,27 +1042,7 @@ else:
     exit(1)
 ```
 
-
-## File io
-```python
-import csv
-file = open("notebook.csv", "a")
-name = input("name ")
-phone = input("phone ")
-writer = csv.writer(file)
-writer.writerow((name, phone))
-file.close()
-```
-or
-```python
-import csv
-name = input("name ")
-phone = input("phone ")
-with open("notebook.csv", "a") as file:
-    writer = csv.writer(file)
-    writer.writerow((name, phone))
-```
-Regular expression
+## Regular expression
 See the quick guide
 Need to import re, re.search() to match re.findall() to extract
 Start with 
