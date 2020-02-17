@@ -12,6 +12,7 @@ Table of contents of the course:   (in progress)
 4. [Control Flow](#Flow):  
    If-Elif-Else, While. 
 5. [Functions](#Functions)
+6. [Command Line Arguments](#Command)
 6. [Classes](#Classes)
 7. [Algorithms](#Algorithms)
 8. [Exercises](#Exercices)
@@ -133,7 +134,7 @@ print(f"{sum2(10):.0f}")
 ```
 
 
-<h2 id="Swap">Swapping values in Python</h2>
+<h3 id="Swap">Swapping values in Python</h3>
 In Python it is very easy to swap two values like the below example with two ints
 ```python
 # Swaps two integers
@@ -154,7 +155,9 @@ b = tmp;
 ```
 
 ### Boolean
-In python indentation is important. Indent 4 spaces.   
+
+In python indentation is important. Indent 4 spaces.  
+
 ```python
 # Logical operators
 
@@ -529,7 +532,7 @@ print(raise_to_power(3, 5))
 print("hello\n" * 3)
 ```
 
-Mario!
+
 ## Print out this many rows
 ```python
 for i in range(4):
@@ -1042,7 +1045,8 @@ if __name__ =='__main__':
 else:
     print("run from import")
 ```    
-## Command Line Arguments
+
+<h2 id = "Command">Command Line Arguments</h2>
 
 
 Offset by one in python
