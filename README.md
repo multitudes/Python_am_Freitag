@@ -17,7 +17,7 @@ Table of contents of the course:   (in progress)
 6. [Classes](#Classes)
 9. [Regular Expressions](#re)
 7. [Algorithms](#Algorithms)
-8. [Exercises](#Exercices)
+8. [Exercises](#Exercises)
 9. [Some Humor](#Some_Humor)
 
 ## Installation
