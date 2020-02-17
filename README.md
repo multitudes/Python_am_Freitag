@@ -21,7 +21,7 @@ Table of contents of the course:
 11. [Algorithms](#Algorithms)
 12. [Exercises](#Exercises)
 13. [Some Humor](#Some_Humor)
-14. [A List of Python Resources](resources)
+14. [A List of Python Resources](#resources)
 
 
 ## Installation
