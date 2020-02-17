@@ -9,7 +9,7 @@ Table of contents of the course:
 
 1.  [Installation](#Installation)  
 2.  [Basics](#Basics):  
-   [Variables](#Variables), [Strings](#Strings), [Integers](#Integers), [Floats](#Floats), [Swapping values](#Swap), [Booleans](#Booleans), [Get Input](#Input) 
+   [Variables](#Variables), [Strings](#Strings), [Integers](#Integers), [Floats](#Floats), [Swapping values](#Swap), [Booleans](#Booleans)
 3. [Collections](#Collections)
 4. [Control Flow](#Flow)
 5. [Functions](#Functions)
@@ -49,6 +49,20 @@ answer = input("Name: ")
 print("hello,", answer)
 ```
 
+Get input from the user:
+```python
+name = input("Enter your name: ")
+age = input("Enter your age :")
+print("\nhello " + name + "!")
+print("You are " + age + “.")
+```
+Here there is a small bug:
+```python
+num1 = input("Enter a number : ")
+num2 = input("Enter a number : ")
+result = num1 + num2
+print(result)
+```
 Another option is formatting the output. The syntax is:
 ```python
 answer = input("Name: ")
@@ -239,23 +253,6 @@ if s.lower() in ["y", "yes"]:
     print("\nagreed!")
 elif s.lower() in ["n", "no"]:
     print(“no")
-```
-
-<h3 id="Input">Get Input</h3>
-
-Get input from the user:
-```python
-name = input("Enter your name: ")
-age = input("Enter your age :")
-print("\nhello " + name + "!")
-print("You are " + age + “.")
-```
-There is a bug:
-```python
-num1 = input("Enter a number : ")
-num2 = input("Enter a number : ")
-result = num1 + num2
-print(result)
 ```
 
 ## Collections
