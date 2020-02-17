@@ -1300,6 +1300,18 @@ after.save("out.png")
 
 ## Exercises
 
+* FizzBuzz
+* Fibonacci
+
+```python
+a, b = 0, 1
+
+for i in range(0, 10):
+    print(a)
+    a,b = b, a+b
+
+```
+
 Ich habe diese message bekommen. Ich glaube es ist encrypted.
 “dlrow olleh”. Schreib ein Programm um diese art von Nachrichten zu entziffern
 
