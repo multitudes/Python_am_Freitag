@@ -1,8 +1,11 @@
-# Python am Freitag
+# Python am Freitag  
+(in progress)
 
-Introduction to Python. It is the material for a full week of course.
+> “Tell me and I forget. Show me and I remember. Involve me and I understand.”  Chinese proverb 
 
-Table of contents of the course:   (in progress)
+Introduction to Python. This is some material for a full week of the course.
+
+Table of contents of the course:  
 
 1.  [Installation](#Installation)  
 2.  [Basics](#Basics):  
@@ -16,9 +19,11 @@ Table of contents of the course:   (in progress)
 6. [Command Line Arguments](#Command)
 6. [Classes](#Classes)
 9. [Regular Expressions](#re)
+10.[Websockets and Web Requests](#sockets)
 7. [Algorithms](#Algorithms)
 8. [Exercises](#Exercises)
 9. [Some Humor](#Some_Humor)
+
 
 ## Installation
 
@@ -150,8 +155,6 @@ print(f"x / y = {z:.50f}")
 # print mit zero digits..
 print(f"{sum2(10):.0f}")
 ```
-
-
 <h3 id="Swap">Swapping values in Python</h3>
 
 In Python it is very easy to swap two values like the below example with two ints:
@@ -1148,9 +1151,9 @@ image = qrcode.make("https://youtu.be/oHg5SJYRHA0")
 image.save("qr.png", "PNG")
 ```
 
-## Socket programming
+<h2 id="sockets">Websockets and Web Requests</h2>
 
-> “Tell me and I forget. Show me and I remember. Involve me and I understand.”  Chinese proverb 
+### Websockets
 
 End systems are hosts like server and client host. Network-core devices are routers etc
 two predominant architectural paradigms used in modern network applications: the client-server architecture or the peer-to-peer (P2P) architecture. 
