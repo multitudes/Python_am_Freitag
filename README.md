@@ -16,12 +16,12 @@ Table of contents of the course:
 6. [Read and write I/O](#io)
 7. [Command Line Arguments](#Command)
 8. [Classes](#Classes)
-9. [Regular Expressions](#re)
-10.[Websockets and Web Requests](#sockets)
-11. [Algorithms](#Algorithms)
-12. [Exercises](#Exercises)
-13. [Some Humor](#Some_Humor)
-14. [A List of Python Resources](#resources)
+9. [Regular Expressions](#re)  
+10.[Websockets and Web Requests](#sockets)  
+11. [Algorithms](#Algorithms)  
+12. [Exercises](#Exercises)  
+13. [Some Humor](#Some_Humor)  
+14. [A List of Python Resources](#resources)  
 
 
 ## Installation
