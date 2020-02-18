@@ -302,6 +302,7 @@ print(friends)
 print(friends.index(22))
 friends.reverse()
 friends.sort()
+friends.sort(reverse=True)
 print(friends)
 friends2 = friends.copy()
 #join
