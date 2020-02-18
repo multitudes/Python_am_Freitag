@@ -309,6 +309,13 @@ friends2 = friends.copy()
 #join
 a = ["a", "b", "c"]
 print(“'".join(a))
+
+# compute average
+scores=[72, 73, 33]
+scores.append(33)
+print(f"Averages: {sum(scores) / len(scores)}")
+
+
 ```
 
 ## Dictionary
@@ -525,34 +532,28 @@ for c in s:
     print(c)
 ```
 
-## Iterate on characters
+#### Iterate on characters
 ```python
 s = input("Input: ")
 print("Output:", end="")
 for i in range(len(s)):
     print(s[i], end="")
 ```
-## Uppercase 
+#### Uppercase 
 ```python
 s = input("Input: ")
 print("Output:", end="")
 print(s.upper())
+
 c = 'p'
 print("The ASCII value of '" + c + "' is", ord(c))
 print(chr(65))
-
-scores.append(33)
-print(f"Averages: {sum(scores) / len(scores)}")
-
-scores=[72, 73, 33]
 
 line = "From laurent.brusa@me.com Sat Jan 5 09:15:55 2020"
 words = line.split()
 email = words[1]
 email_pieces = email.split("@")
 ```
-
-
 
 ## Functions 
 
@@ -636,7 +637,7 @@ if __name__ == "__main__":
 
 ## Get positive int
 
-In Python the scope of a variable is the whole function
+In Python the scope of a variable is the whole function!
 ```python
 def main():
     i = get_positive_int("Positive integer: ")
@@ -651,6 +652,33 @@ def get_positive_int(prompt):
 if __name__ == "__main__":
     main()
 ```
+
+## Import
+
+Make a file called useful.py
+In the file put this function
+```python
+import Random    
+def roll_dice(num):
+    return random.randint(1, num)
+```
+In a new file you call this function inserting the import on the top:
+```python
+import useful_tools
+
+print(useful_tools.roll_dice(10))
+```
+
+Check the docs for more modules!
+
+#### QR
+```python
+import qrcode
+#pip install qrcode
+image = qrcode.make("https://youtu.be/oHg5SJYRHA0")
+image.save("qr.png", "PNG")
+```
+
 #### Explanation of __main__
 It is the name of the first module run.
 When we run this file directly Python sets the value of __name__ to main
@@ -694,6 +722,9 @@ def func_square(nums):
 a = func_square(nums)
 print(a)
 
+# sorting dict
+a = sorted( [(b,a) for (a, b) in counts.items()] )
+print(list(reversed(a))[:3])
 ```
 ## Try and except
 Basic:
@@ -710,6 +741,7 @@ better:
 try:
     value = 10 / 0
     number = int(input("enter a number "))
+    # also int in base 2! int(input("input a number : "), 2)
     print(number)
 
 except ZeroDivisionError as err:
@@ -766,31 +798,15 @@ for line in fhand:
         line = line.rstrip()
         print(line)
 ```
+
 ```python
-text_file = open("text.txt", “r") # when “w” not readable!
+text_file = open("text.txt", “r") # when “w” not readable! default is read, w overwrites!
 print(text_file.readable())
 text_file.close()
 
 print(text_file.read())
 print(text_file.readline())
 ```
-## Import
-
-Make a file called useful.py
-In the file put this function
-```python
-import Random    
-def roll_dice(num):
-    return random.randint(1, num)
-```
-In a new file you call this function inserting the import on the top:
-```python
-import useful_tools
-
-print(useful_tools.roll_dice(10))
-```
-
-Check the docs for more modules!
 
 
 ## Classes 
@@ -1151,15 +1167,8 @@ x = "a real $10 bill"
 y = re.findall("\$[0-9]+", x)
 print(y)
 ```
-More advanced
 
-## QR
-```python
-import qrcode
-#pip install qrcode
-image = qrcode.make("https://youtu.be/oHg5SJYRHA0")
-image.save("qr.png", "PNG")
-```
+
 
 <h2 id="sockets">Websockets and Web Requests</h2>
 
