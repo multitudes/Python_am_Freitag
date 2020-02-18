@@ -303,6 +303,7 @@ print(friends.index(22))
 friends.reverse()
 friends.sort()
 friends.sort(reverse=True)
+list(reversed(a)) # reversed(a) is a range! so need to make it a list
 print(friends)
 friends2 = friends.copy()
 #join
