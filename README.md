@@ -1528,6 +1528,18 @@ What is the solution to your captcha?
 
 https://adventofcode.com/2017/day/1
 
+```python
+# map is functional programming. can be done with a loop of course but much longer code. Why a tuple? they are immutable and I do not need to mutate the input therefore I use tuple, it is also an added security. *args and **kwargs are magic variables.
+problem_input = '91212129'
+digits = tuple(map(int, problem_input))
+print(digits)
+N = len(digits)
+a = sum(digits[i]
+        for i in range(N)
+        if digits[i] == digits[i - 1])
+print('solution is : ',a)
+
+```
 
 <h2 id="Some_Humor">Some Humor</h2>
 
