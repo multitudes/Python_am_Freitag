@@ -198,9 +198,11 @@ Floating point imprecision
 ```python
 x = float(input("x: "))
 y = float(input("y: "))
-z = x / y
+z = x / y # try 1 / 10 
 # not integer overflow but floating point imprecision
-print(f"x / y = {z:.50f}")
+print(f"x / y = {z:.50f}") # prints 0.10000000000000000555111512312578270211815834045410
+# this is because 1/10 in bin is 0.00011001100... etc to infinite.
+# so we would get 0+0+0+0+1/16 + 1/32 + 0 + 0 + 1/256 + 1/512 ... etc (0.099609375 +...)
 # print mit zero digits..
 print(f"{sum2(10):.0f}")
 ```
@@ -1401,8 +1403,29 @@ We speak of asymptotic analysis. In math this is describing limiting behaviour o
 
 #### Euler problem 1
 If we list all the natural numbers below 10 that are multiples of 3 or 5, we get 3, 5, 6 and 9. The sum of these multiples is 23.  
-Find the sum of all the multiples of 3 or 5 below 1000.  
+Find the sum of all the multiples of 3 or 5 below 1000.  (233168)
 Two ways. One is O(n), the other O(1)!
+```python
+def euler2():
+    number = 0
+    for i in range(1000):
+        if i % 5 == 0 or i % 3 == 0:
+            total += i
+        continue
+    return number
+
+def euler1():
+    number = 0
+    a = set(range(3,1000,3))
+    b = set(range(5,999,5))
+    number_set = a.union(b)
+    print(number_set)
+    number = sum(number_set)
+    return number
+
+```
+
+#### sum all numbers in a range
 ```python
 def sum1(n):
     final_sum = 0
