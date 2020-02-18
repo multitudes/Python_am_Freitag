@@ -1247,6 +1247,28 @@ for line in fhand:
         counts[word] = counts.get(word, 0) + 1
 print(counts)
 ```
+With images, ex start the local http server again
+```python
+import urllib.request, urllib.parse, urllib.error
+
+img = urllib.request.urlopen('http://localhost:12000/image.jpeg').read()
+fhand = open('cover3.jpg','wb')
+fhand.write(img)
+fhand.close()
+
+img = urllib.request.urlopen('http://data.pr4e.org/cover3.jpg')
+fhand = open('cover3.jpg', 'wb')
+size = 0
+while True:
+    info = img.read(100000)
+    if len(info) < 1: break
+    size = size + len(info)
+    fhand.write(info)
+
+print(size, 'characters copied.')
+fhand.close()
+```
+
 
 open the terminal below and enter `python3 -m http.server 81`
 ```python
