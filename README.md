@@ -19,7 +19,8 @@ Table of contents of the course:
 9. [Regular Expressions](#re)  
 10. [Websockets and Web Requests](#sockets)  
 11. [Algorithms](#Algorithms)  
-12. SQLite Module (in progress)
+12. [Jupyter Notebooks](#Jupyter)
+12. [SQLite Module (in progress)](#sqlite)
 13. [Exercises](#Exercises)  
 14. [Some Humor](#Some_Humor)  
 15. [A List of Python Resources](#resources)  
@@ -1342,98 +1343,6 @@ after = before.filter(ImageFilter.BLUR)
 after.save("out.png")
 ```
 
-## Exercises
-
-* FizzBuzz
-* Fibonacci
-
-```python
-a, b = 0, 1
-
-for i in range(0, 10):
-    print(a)
-    a,b = b, a+b
-
-```
-
-Ich habe diese message bekommen. Ich glaube es ist encrypted.
-“dlrow olleh”. Schreib ein Programm um diese art von Nachrichten zu entziffern
-
-#### Reverse Cipher
-```python
-message = 'dlrow olleh'
-translated = ''
-i = len(message) - 1
-while i >= 0:
-    translated = translated + message[i]
-    i = i - 1
-print(translated)
-```
-
-#### Print out a block
-```python
-for i in range(4):
-    # Print out this many columns
-    for j in range(4):
-        print("#", end="")
-    print()
-```
-
-
-Look at the CS50 problems like: 
-mario/ cash / credit cards/cesar / crack / vigenere / bleep
-
-```
-#Mario
-n = 8
-a: int = n
-b: int = 0
-for i in range(n):
-    a = a - 1
-    b = b + 1
-    print("." * a, end="")
-    print("x" * b, end="\n")
-```
-
-Both sides
-```
-n = 8
-a: int = n
-b: int = 0
-for i in range(n):
-    a = a - 1
-    b = b + 1
-    print("." * a, end="")
-    print("x" * b, end=" ")
-    print("x" * b, end="")
-    print("." * a, end="\n")
-```
-Print a cat
-
-A Three Questions Quiz game. It can be done in many different ways, 
-* with if statements. 
-* With reading from file
-* With lists / dicts
-* With oop
-
-## The Captcha:
-You're standing in a room with "digitisation quarantine" written in LEDs along one wall. The only door is locked, but it includes a small interface. 
-
-"Restricted Area - Strictly No Digitised Users Allowed."
-
-It goes on to explain that you may only leave by solving a captcha to prove you're not a human. Apparently, you only get one millisecond to solve the captcha: too fast for a normal human, but it feels like hours to you.
-The captcha requires you to review a sequence of digits (your puzzle input) and find the sum of all digits that match the next digit in the list. The list is circular, so the digit after the last digit is the first digit in the list.
-
-For example:
-1122 produces a sum of 3 (1 + 2) because the first digit (1) matches the second digit and the third digit (2) matches the fourth digit.
-1111 produces 4 because each digit (all 1) matches the next.
-1234 produces 0 because no digit matches the next.
-91212129 produces 9 because the only digit that matches the next one is the last digit, 9.
-
-What is the solution to your captcha?
-
-https://adventofcode.com/2017/day/1
-
 ## Algorithms
 
 The big O. To compare algorithms, we ask, which one is better than other?  
@@ -1510,7 +1419,113 @@ https://projekteuler.de
 
 https://projecteuler.net/problem=1
 
+<h2 id = 'jupyter'>Jupyter Notebooks</h2>
+This needs to be installed via command line in terminal (do not type the '$' which is your prompt). Ensure you are in the correct folder in your Python environment in PyCharm, if not navigate to it, then ensure that you have the latest pip with:
+```bash
+$ pip3 install --upgrade pip
+```
+Then install the Jupyter Notebook using:
+```bash
+$ pip3 install jupyter
+```
+then still in the same folder you start in terminal with:
+```bash
+$ jupyter notebook
+```
 ## SQLite Module (in progress)
+
+## Exercises
+
+* FizzBuzz
+* Fibonacci
+
+```python
+a, b = 0, 1
+
+for i in range(0, 10):
+    print(a)
+    a,b = b, a+b
+
+```
+
+Ich habe diese message bekommen. Ich glaube es ist encrypted.
+“dlrow olleh”. Schreib ein Programm um diese art von Nachrichten zu entziffern
+
+#### Reverse Cipher
+```python
+message = 'dlrow olleh'
+translated = ''
+i = len(message) - 1
+while i >= 0:
+    translated = translated + message[i]
+    i = i - 1
+print(translated)
+```
+
+#### Print out a block
+```python
+for i in range(4):
+    # Print out this many columns
+    for j in range(4):
+        print("#", end="")
+    print()
+```
+
+
+Look at the CS50 problems like: 
+mario/ cash / credit cards/cesar / crack / vigenere / bleep
+
+```
+#Mario
+n = 8
+a: int = n
+b: int = 0
+for i in range(n):
+    a = a - 1
+    b = b + 1
+    print("." * a, end="")
+    print("x" * b, end="\n")
+```
+
+Both sides
+```
+n = 8
+a: int = n
+b: int = 0
+for i in range(n):
+    a = a - 1
+    b = b + 1
+    print("." * a, end="")
+    print("x" * b, end=" ")
+    print("x" * b, end="")
+    print("." * a, end="\n")
+```
+Print a cat
+
+A Three Questions Quiz game. It can be done in many different ways, 
+* with if statements. 
+* With reading from file
+* With lists / dicts
+* With oop
+
+#### The Captcha:
+You're standing in a room with "digitisation quarantine" written in LEDs along one wall. The only door is locked, but it includes a small interface. 
+
+"Restricted Area - Strictly No Digitised Users Allowed."
+
+It goes on to explain that you may only leave by solving a captcha to prove you're not a human. Apparently, you only get one millisecond to solve the captcha: too fast for a normal human, but it feels like hours to you.
+The captcha requires you to review a sequence of digits (your puzzle input) and find the sum of all digits that match the next digit in the list. The list is circular, so the digit after the last digit is the first digit in the list.
+
+For example:
+1122 produces a sum of 3 (1 + 2) because the first digit (1) matches the second digit and the third digit (2) matches the fourth digit.
+1111 produces 4 because each digit (all 1) matches the next.
+1234 produces 0 because no digit matches the next.
+91212129 produces 9 because the only digit that matches the next one is the last digit, 9.
+
+What is the solution to your captcha?
+
+https://adventofcode.com/2017/day/1
+
 
 <h2 id="Some_Humor">Some Humor</h2>
 
