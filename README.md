@@ -353,7 +353,7 @@ high_count = None
 for letter, count in counts.items():
     if letter == " ":
         continue
-    if high_count == None or count > high_count:
+    if high_count is None or count > high_count:
         high_letter = letter
         high_count = count
 print("The highest letter count is :",(high_letter, high_count))
