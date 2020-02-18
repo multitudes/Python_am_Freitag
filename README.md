@@ -684,7 +684,15 @@ if __name__ =='__main__':
 else:
     print("run from import")
 ```    
+#### bit of functional
+```python
+nums = list(range(10))
+def func_square(nums):
+    return [num * num for num in nums]
+a = func_square(nums)
+print(a)
 
+```
 ## Try and except
 Basic:
 ```python
