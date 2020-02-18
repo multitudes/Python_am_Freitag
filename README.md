@@ -19,9 +19,10 @@ Table of contents of the course:
 9. [Regular Expressions](#re)  
 10. [Websockets and Web Requests](#sockets)  
 11. [Algorithms](#Algorithms)  
-12. [Exercises](#Exercises)  
-13. [Some Humor](#Some_Humor)  
-14. [A List of Python Resources](#resources)  
+12. SQLite Module (in progress)
+13. [Exercises](#Exercises)  
+14. [Some Humor](#Some_Humor)  
+15. [A List of Python Resources](#resources)  
 
 
 ## Installation
@@ -1487,6 +1488,7 @@ https://projekteuler.de
 
 https://projecteuler.net/problem=1
 
+## SQLite Module (in progress)
 
 <h2 id="Some_Humor">Some Humor</h2>
 
