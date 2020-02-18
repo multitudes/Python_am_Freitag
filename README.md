@@ -1420,7 +1420,9 @@ https://projekteuler.de
 https://projecteuler.net/problem=1
 
 <h2 id = 'jupyter'>Jupyter Notebooks</h2>
+
 This needs to be installed via command line in terminal (do not type the '$' which is your prompt). Ensure you are in the correct folder in your Python environment in PyCharm, if not navigate to it, then ensure that you have the latest pip with:
+
 ```bash
 $ pip3 install --upgrade pip
 ```
