@@ -1076,7 +1076,7 @@ else:
     print("hello, world")
 ```
 #### shebang
-In Unix systems the shebang is `#!/usr/bin/env python3`, on windows maybe with `/usr/bin/env` but die not try yet!
+In Unix systems the shebang is `#!/usr/bin/env python3`, on windows maybe with `/usr/bin/env` or `#! python3` but did not try yet!
 (unix) Need to make the file executable in terminal with :
 ```bash
 chmod +x hello.py
@@ -1189,9 +1189,22 @@ x = "a real $10 bill"
 y = re.findall("\$[0-9]+", x)
 print(y)
 ```
+Or this syntax. The first returns all vowel in an array, the second all consonants
+```python
+vowelRegex = re.compile(r'[aeiouAEIOU]')
+vowelRegex.findall('Alice was beginning to get very tired of sitting by her sister
+on the bank, and of having nothing to do')
+consonantRegex = re.compile(r'[^aeiouAEIOU]')
+consonantRegex.findall('Alice was beginning to get very tired of sitting by her sister
+on the bank, and of having nothing to do')
 
+atRegex = re.compile(r'.at')
+atRegex.findall('The cat in the hat sat on the flat mat.')
 
-
+nameRegex = re.compile(r'First Name: (.*) Last Name: (.*)') 
+mo = nameRegex.search('First Name: Laurent Last Name: Brusa')
+print(mo.group(1),mo.group(2))
+```
 <h2 id="sockets">Websockets and Web Requests</h2>
 
 ### Websockets
