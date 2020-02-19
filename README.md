@@ -1472,6 +1472,10 @@ Look for interesting notebook here:
 and here for ex:
 [https://nbviewer.jupyter.org/github/ipython/ipython/blob/master/examples/IPython%20Kernel/Index.ipynb](https://nbviewer.jupyter.org/github/ipython/ipython/blob/master/examples/IPython%20Kernel/Index.ipynb)
 
+Dowload and move to current folder(mac)
+```bash
+$ mv ~/Downloads/filename ./
+```
 ## SQLite Module (in progress)
 
 ## Exercises
