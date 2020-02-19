@@ -1476,6 +1476,8 @@ Dowload and move to current folder(mac)
 ```bash
 $ mv ~/Downloads/filename ./
 ```
+List the Magic with `%lsmagic` in the notebook
+
 ## SQLite Module (in progress)
 
 ## Exercises
