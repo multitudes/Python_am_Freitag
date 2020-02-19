@@ -1467,6 +1467,9 @@ then still in the same folder you start in terminal with:
 ```bash
 $ jupyter notebook
 ```
+Look for interesting notebook here:
+[https://github.com/jupyter/jupyter/wiki/A-gallery-of-interesting-Jupyter-Notebooks](https://github.com/jupyter/jupyter/wiki/A-gallery-of-interesting-Jupyter-Notebooks)
+
 ## SQLite Module (in progress)
 
 ## Exercises
