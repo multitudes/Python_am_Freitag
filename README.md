@@ -1076,8 +1076,8 @@ else:
     print("hello, world")
 ```
 #### shebang
-In Unix systems.
-Need to make the file executable in terminal
+In Unix systems the shebang is `#!/usr/bin/env python3`, on windows maybe with `/usr/bin/env` but die not try yet!
+(unix) Need to make the file executable in terminal with :
 ```bash
 chmod +x hello.py
 ```
