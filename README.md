@@ -1684,5 +1684,5 @@ Try the 'fivethirtyeight', 'seaborn' and 'ggplot'
 
 and for the xkcd feel add this instead of using a style:
 '''python
-
+plt.xkcd()
 '''
