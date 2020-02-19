@@ -1438,41 +1438,6 @@ $ jupyter notebook
 
 ## Exercises
 
-* FizzBuzz
-* Fibonacci
-
-```python
-a, b = 0, 1
-
-for i in range(0, 10):
-    print(a)
-    a,b = b, a+b
-
-```
-
-Ich habe diese message bekommen. Ich glaube es ist encrypted.
-“dlrow olleh”. Schreib ein Programm um diese art von Nachrichten zu entziffern
-
-#### Reverse Cipher
-```python
-message = 'dlrow olleh'
-translated = ''
-i = len(message) - 1
-while i >= 0:
-    translated = translated + message[i]
-    i = i - 1
-print(translated)
-```
-
-#### Print out a block
-```python
-for i in range(4):
-    # Print out this many columns
-    for j in range(4):
-        print("#", end="")
-    print()
-```
-
 
 Look at the CS50 problems like: 
 mario/ cash / credit cards/cesar / crack / vigenere / bleep
@@ -1503,6 +1468,43 @@ for i in range(n):
     print("." * a, end="\n")
 ```
 Print a cat
+#### Print out a block
+```python
+for i in range(4):
+    # Print out this many columns
+    for j in range(4):
+        print("#", end="")
+    print()
+```
+
+* FizzBuzz
+* Fibonacci
+
+```python
+a, b = 0, 1
+
+for i in range(0, 10):
+    print(a)
+    a,b = b, a+b
+
+```
+#### The Collatz Sequence
+Write a function named collatz() that has one parameter named number. If number is even, then collatz() should print number // 2 and return this value. If number is odd, then collatz() should print and return 3 * number + 1.
+Then write a program that lets the user type in an integer and that keeps calling collatz() on that number until the function returns the value 1.
+
+#### Reverse Cipher
+Ich habe diese message bekommen. Ich glaube es ist encrypted.
+“dlrow olleh”. Schreib ein Programm um diese art von Nachrichten zu entziffern
+
+```python
+message = 'dlrow olleh'
+translated = ''
+i = len(message) - 1
+while i >= 0:
+    translated = translated + message[i]
+    i = i - 1
+print(translated)
+```
 
 A Three Questions Quiz game. It can be done in many different ways, 
 * with if statements. 
@@ -1613,3 +1615,74 @@ https://curl.haxx.se/download.html
 
 [1]: <https://hg.python.org/cpython/file/tip/Lib/antigravity.py> "Hobbit lifestyles"
 [2]: <https://forums.fast.ai/t/recommended-python-learning-resources/26888>
+
+
+## Environments 
+They are used default is PyCharm but if you need to activate them in bash:
+ps do not put any of your files in venv folder. venv should not be on version control
+```bash
+# create project_env
+python3 -m venv project_env
+# activate
+source project_env/bin/activate
+# if you check you will see the env created
+which python3
+# check your modules
+pip list
+# create a requirements file
+pip3 freeze > requirements.txt
+cat requirements.txt
+deactivate
+# remove
+rm -rf project_env
+# or commonly create my project directory
+mkdir myproject
+python3 -m venv myproject/venv
+
+# using a requirements.txt
+pip3 install -r requirements.txt
+
+# using a global venv
+python3 -m venv venv --system-site-packages
+
+pip3 list --local
+``` 
+
+## matplotlib
+
+```bash
+pip3 install matplotlib
+```
+In PyCharm:
+```python
+from matplotlib import pyplot as plt
+
+dev_x = [25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35]
+dev_y = [38496, 42000, 46752, 49320, 53200,
+         56000, 62316, 64928, 67317, 68748, 73752]
+
+plt.plot(dev_x,dev_y, label = 'salaries/age')
+plt.title("title")
+plt.legend(loc=0)
+plt.show()
+```
+adding two graphs at once. with markers and colors(which can be hex)
+```
+plt.plot(dev_x,dev_y, color='k',linestyle='--',marker=".", label = 'salaries/age')
+plt.plot(dev_x,py_dev_y,color='#5a7d9a',marker="o",linewidth=3, label = 'Python salaries/age')
+plt.plot(dev_x,js_dev_y,color='#444444',marker="o",linewidth=3, label = 'Python salaries/age')
+# some customizations 
+plt.tight_layout()
+plt.grid(True)`
+```
+styles:
+```python
+# print(plt.style.available)
+plt.style.use('ggplot')
+```
+Try the 'fivethirtyeight', 'seaborn' and 'ggplot' 
+
+and for the xkcd feel add this instead of using a style:
+'''python
+
+'''
