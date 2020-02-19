@@ -1640,6 +1640,8 @@ https://www.pythonweekly.com/
 https://importpython.com/newsletter/
 https://pycoders.com/ 
 
+Gravitational waves notebook!
+https://github.com/gw-odw/odw-2019
 And curl! For windows! (check Cygwin
 https://curl.haxx.se/download.html
 
