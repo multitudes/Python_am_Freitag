@@ -1075,6 +1075,26 @@ if len(argv) == 2:
 else:
     print("hello, world")
 ```
+#### shebang
+In Unix systems.
+Need to make the file executable in terminal
+```bash
+chmod +x hello.py
+```
+
+```python
+#!/usr/bin/env python3
+import sys
+def main():
+    if len(sys.argv) >= 2:
+        name = sys.argv[1]
+    else:
+        name = 'world'
+    print('hello',name)
+
+if __name__ == '__main__':
+    main()
+```    
 Exit with value:
 ```python
 from sys import argv, exit
