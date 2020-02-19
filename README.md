@@ -635,8 +635,15 @@ def hello(n):
 if __name__ == "__main__":
     main()
 ```
+#### lambda
+Lambdas Are Single-Expression Functions. Try in the interpreter:
+```python
+add = lambda x, y: x + y
+print(add(5, 3))
 
+(lambda x, y: x + y)(5, 3)
 
+```
 ## Get positive int
 
 In Python the scope of a variable is the whole function!
