@@ -1397,7 +1397,7 @@ If we list all the natural numbers below 10 that are multiples of 3 or 5, we get
 Find the sum of all the multiples of 3 or 5 below 1000.  (233168)
 Two ways. One is O(n), the other O(1)!
 ```python
-def euler2():
+def euler1():
     number = 0
     for i in range(1000):
         if i % 5 == 0 or i % 3 == 0:
@@ -1405,10 +1405,10 @@ def euler2():
         continue
     return number
 
-def euler1():
+def euler2():
     number = 0
     a = set(range(3,1000,3))
-    b = set(range(5,999,5))
+    b = set(range(5,1000,5))
     number_set = a.union(b)
     print(number_set)
     number = sum(number_set)
@@ -1439,7 +1439,7 @@ def bubbleSort(arr):
     # Traverse through all array elements
     for i in range(n):
         # Last i elements are already in place
-        for j in range(0, n - i - 1):
+        for j in range(n - i - 1):
             # traverse the array from 0 to n-i-1
             # Swap if the element found is greater
             # than the next element
@@ -1448,9 +1448,7 @@ def bubbleSort(arr):
 # Driver code to test above
 arr = [64, 34, 25, 12, 22, 11, 90]
 bubbleSort(arr)
-print("Sorted array is:")
-for i in range(len(arr)):
-    print("%d" % (arr[i]), end=", ")
+print("Sorted array is:", arr)
 ```
 
 Also check:
@@ -1479,7 +1477,7 @@ Look for interesting notebook here:
 and here for ex:
 [https://nbviewer.jupyter.org/github/ipython/ipython/blob/master/examples/IPython%20Kernel/Index.ipynb](https://nbviewer.jupyter.org/github/ipython/ipython/blob/master/examples/IPython%20Kernel/Index.ipynb)
 
-Dowload and move to current folder(mac)
+Dowload from the web and move to current folder(mac)
 ```bash
 $ mv ~/Downloads/filename ./
 ```
@@ -1489,9 +1487,8 @@ List the Magic with `%lsmagic` in the notebook
 
 ## Exercises
 
-
 Look at the CS50 problems like: 
-mario/ cash / credit cards/cesar / crack / vigenere / bleep
+mario/ cash / credit cards / cesar / crack / vigenere / bleep
 
 ```
 #Mario
@@ -1518,7 +1515,6 @@ for i in range(n):
     print("x" * b, end="")
     print("." * a, end="\n")
 ```
-Print a cat
 #### Print out a block
 ```python
 for i in range(4):
