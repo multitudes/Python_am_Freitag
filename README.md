@@ -63,6 +63,7 @@ more comment
 '''
 # this too
 ```
+
 #### Slicing strings
 ex `message = “monty python”` and `print(message[1:3])` etc
 ```python
@@ -185,9 +186,17 @@ dict -> collection key value pairs, implemented as hash table
 set -> collection of unique value
 
 #### Numbers 
+
+Check the type with :
+```python
+num = 3
+print(type(num)) #class int!
+```
+We can of course do addition, substraction, multiplication, modulo.. division need `/` or `//` for the int usual behaviour.
+
 ```python
 from math import *
-print(str(2) + "my fav number")
+print(str(2) + " my fav number")
 a = -4
 print(abs(a))
 print(pow(2.3, 6))
