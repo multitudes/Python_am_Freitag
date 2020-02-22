@@ -28,7 +28,13 @@ Table of contents of the course:
 
 ## Installation
 
-Installation python 3.8, PyCharm IDE.  
+Installation [python 3.8][3]:  
+Check your version:
+```bash
+$ python3 --version
+
+```
+Install PyCharm IDE.
 Intro in the Python console, IDLE, PyCharm IDE.  
 
 ## Basics
@@ -1662,10 +1668,6 @@ https://curl.haxx.se/download.html
 [https://www.fast.ai/2019/12/02/nbdev/](https://www.fast.ai/2019/12/02/nbdev/)
 
 
-[1]: <https://hg.python.org/cpython/file/tip/Lib/antigravity.py> "Hobbit lifestyles"
-[2]: <https://forums.fast.ai/t/recommended-python-learning-resources/26888>
-
-
 ## Environments 
 They are used default is PyCharm but if you need to activate them in bash:
 ps do not put any of your files in venv folder. venv should not be on version control
@@ -1735,3 +1737,9 @@ and for the xkcd feel add this instead of using a style:
 '''python
 plt.xkcd()
 '''
+
+
+
+[1]: <https://hg.python.org/cpython/file/tip/Lib/antigravity.py> "Hobbit lifestyles"
+[2]: <https://forums.fast.ai/t/recommended-python-learning-resources/26888>
+[3]: <https://www.python.org/downloads/>
