@@ -516,6 +516,10 @@ if language == 'python':
 elif language == 'Java':
    print('language is Java')
 ```
+`None` evaluate to `False` like `0` and empty sequences mapping and lists: `''`, `[]`, `{}`, `()`. All other numbers eval to `True`
+
+
+
 Example:
 ```python
 # Logical operators
