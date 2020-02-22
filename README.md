@@ -54,7 +54,28 @@ print("hello, world”)
 Python does not need curly braces, semicolons or to imports main etc.   
 It works out of the box.   
 
+### Comments in python
+`'''` needs to be followed by newline!
+```python
+'''
+this is a comment
+more comment
+'''
+# this too
+```
+#### Slicing strings
+ex `message = “monty python”` and `print(message[1:3])` etc
+```python
+message = “monty python”
+print(message.find("monty"))
+print(message.count("monty"))
+print(message.replace("monty","python"))
+
+```
+ 
 ### Formatting print()
+
+Single quotes and double quotes both possible but for instance if we know our string contains single quotes we use double quotes on the outside.
 
 Different ways to print on the console. We need no space after the hello if we use the comma variant.  
 ```python
@@ -78,17 +99,28 @@ print(result)
 ```
 Another option is formatting the output. The syntax is:
 ```python
-answer = input("Name: ")
-print(f"hello, {answer}")
 # or print two variables with format. Automatically will keep the order of what to put in the brackets
 print("{} {}".format(emp1.first, emp1.last))
+
+# new since python3.6: you can add modifiers in the curly brackets using f
+answer = input("Name: ")
+print(f"hello, {answer.upper()}")
+
+# this is also used
+print('Hello %s!' % ('world'))
+print('%s had %s pies.' % ('Alice', 42))
+
+#also print the methods avalaible to the variable
+print(dir(answer))
+# this prints more but need to pass the name of the class in this case strings
+print(help(str))
 
 planet = "world"
 print("hello " + planet + "!")
 
 print("hello " + planet.upper() + "\n")
 ```
-Playing around:  
+and:
 ```python
 print(planet.isascii())
 print(planet.islower())
@@ -108,8 +140,7 @@ print(‘hello'.find('oo')) #-1
 
 ```
 
-
-### Strings
+Play a little:
 
 ```python
 print(“????")
@@ -135,22 +166,6 @@ a = '''\    /\\
  \(__)|'''
 
 print(a)
-```
-String interpolation
-
-```python
-print('Hello %s!' % ('world'))
-print('%s had %s pies.' % ('Alice', 42))
-```
-
-### Comments in python
-
-```python
-'''
-this is a comment
-more comment
-'''
-# this too
 ```
 
 ### Variables 
@@ -294,7 +309,6 @@ print(friends[2])
 print(friends[-2])
 print(friends[1:])
 print(friends[1:3])
-With strings, use “monty python” and slice
 friends[1] = 22
 print(friends[1])
 numbers = [3, 4, 5, 6]
