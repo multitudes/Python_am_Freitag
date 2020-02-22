@@ -257,6 +257,7 @@ print(f"{sum2(10):.0f}")
 
 ## Collections
 ### Lists
+Reference type!
 List is a kind of collection.A list can contain any other python object and Uses square brackets.  
 It can contain heterogeneous elements.  
 Lists are mutable. Strings are immutable. Lists can be concatenated.  
@@ -266,14 +267,6 @@ Start with empty list.. the ‘in’ and ‘not in’ operator. There is a sort(
 sorted() returns a new sorted list, leaving the original list unaffected. list.sort() sorts the list in-place, mutating the list indices, and returns None (like all in-place operations).  
 
 ```python
-list()
-print(list(range(6)))
-print(list(range(1,6,2 )))
-
-scores=[]
-scores.append(72)
-scores.append(73)
-print(max(“hello”)
 friends = ["Kevin", "Karin", "John", 2]
 print(friends[2])
 print(friends[-2])
@@ -281,8 +274,26 @@ print(friends[1:])
 print(friends[1:3])
 friends[1] = 22
 print(friends[1])
+print('Karin' in friends)) # true
+print(friends.find('Karin'))
+for name in friends:
+   print(name)
+for name in enumerate(friends, start=1):
+   print(name, index)
+# create 
+a = list()
+print(list(range(6)))
+print(list(range(1,6,2))
+
+scores=[]
+scores.append(72)
+scores.append(73)
+print(max(“hello”)
 numbers = [3, 4, 5, 6]
-friends.extend(numbers) # extend is appending a list!
+print(min(numbers))
+print(max(numbers))
+print(sum(numbers))
+friends.extend(numbers) # extend is appending a list! otherwise appending a list would nest it!
 print(friends)
 friends.append("joe")
 friends.insert(2, “me")
@@ -290,7 +301,10 @@ print(friends.count(“joe”))
 friends.remove("Kevin")
 print(friends)
 # friends.clear()
-friends.pop()
+
+# popped will return the variable popped, which is the last in the list!
+popped = friends.pop()
+print(popped)
 print(friends.count("joe"))
 friends.remove('me')
 friends.remove('John')
@@ -298,7 +312,7 @@ friends.reverse()
 print(friends)
 print(friends.index(22))
 friends.reverse()
-friends.sort()
+friends.sort() #inplace
 friends.sort(reverse=True)
 list(reversed(a)) # reversed(a) is a range! so need to make it a list
 print(friends)
@@ -311,9 +325,75 @@ print(“'".join(a))
 scores=[72, 73, 33]
 scores.append(33)
 print(f"Averages: {sum(scores) / len(scores)}")
-
-
 ```
+#### Tuples
+We cannot append or remove but we can do much of the same things as in lists  
+Tuples are like lists, indexed at zero, can be iterated. Like strings are not modifiable.
+Tuples can be sorted. We can sort dictionary using the items() 
+```python
+y = (2,4,5,66)
+for i in y:
+    print(i)
+print((max(y)))
+
+(x,y) = (2, "Jo")
+print(y)
+
+print(sorted(counts.items()))
+```
+Sort by values. Create a list of tuples key value and invert and append
+```python
+tmp = list()
+for (key, value) in counts.items():
+    tmp.append((value, key))
+tmp = sorted(tmp)
+print(tmp)
+```
+Shortest !
+```python
+print(sorted([ (v,k) for k,v in counts.items() ]))
+```
+The ten top!
+```python
+for value, key in tmp[:10]:
+    print(key, value)
+```
+Tuples are immutable
+
+```python
+coordinates = (4, 5)
+coordinates[0] = 11
+# no changes supported in tuples they are immutable
+print(coordinates)
+```
+<h3 id="Swap">Swapping values in Python</h3>
+
+In Python it is very easy to swap two values like the below example with two ints:
+
+```python
+# Swaps two integers
+x = 1
+y = 2
+print(f"x is {x}, y is {y}")
+x, y = y, x
+print(f"x is {x}, y is {y}”)
+```
+
+In c for comparison:
+
+```c
+int a = 1;
+int b = 2;
+
+int tmp = a;
+a = b;
+b = tmp;
+```
+### Sets
+Don't care about order. Sets dont take duplicate values. Sets are optimized for membership like checking if `num in set1` or intersection of elements `set3 = set1.intersection(set2)`, or which elements are not in common with difference `set4 = set1.difference(set2)` and union of both sets `set3 = set1.union(set2)`.
+Create an empty set with `emptyset = set()`
+
+
 
 ## Dictionary
 
@@ -380,69 +460,6 @@ if "David" in people:
 else:
     print("\nNot Found")
     exit(1)
-```
-
-#### Tuples
-Tuples are like lists, indexed at zero, can be iterated. Like strings are not modifiable.
-Tuples can be sorted. We can sort dictionary using the items() 
-```python
-y = (2,4,5,66)
-for i in y:
-    print(i)
-print((max(y)))
-
-(x,y) = (2, "Jo")
-print(y)
-
-print(sorted(counts.items()))
-```
-Sort by values. Create a list of tuples key value and invert and append
-```python
-tmp = list()
-for (key, value) in counts.items():
-    tmp.append((value, key))
-tmp = sorted(tmp)
-print(tmp)
-```
-Shortest !
-```python
-print(sorted([ (v,k) for k,v in counts.items() ]))
-```
-The ten top!
-```python
-for value, key in tmp[:10]:
-    print(key, value)
-```
-Tuples are immutable
-
-```python
-coordinates = (4, 5)
-coordinates[0] = 11
-# no changes supported in tuples they are immutable
-print(coordinates)
-```
-<h3 id="Swap">Swapping values in Python</h3>
-
-In Python it is very easy to swap two values like the below example with two ints:
-
-```python
-# Swaps two integers
-x = 1
-y = 2
-print(f"x is {x}, y is {y}")
-x, y = y, x
-print(f"x is {x}, y is {y}”)
-```
-
-In c for comparison:
-
-```c
-int a = 1;
-int b = 2;
-
-int tmp = a;
-a = b;
-b = tmp;
 ```
 
 
