@@ -44,6 +44,9 @@ Intro in the Python console, IDLE, PyCharm IDE.
 
 ## Basics
 
+Python is a general purpose dynamically typed, interpreted language.
+Remember, in python indentation is important.
+
 ### Hello World
 Make a new file called hello.py and run it in terminal and in pycharm.. and in interpreter.  
 ```python
@@ -239,13 +242,28 @@ num1 != num2
 num1 < num2
 # etc
 ```
+Object can be equal to another and not the same object in memory
+```python
+a = [1,2,3]
+b = [1,2,3]
+print(a == b) #true
+print(a is b) # false
+print(id(a)) # 
+print(id(b)) #
+# now they are the same
+a = [1,2,3]
+b = a
+print(a is b) #  true
+print(id(a)) # id of object
+print(id(b)) 
+```
 
 ### Floats
 Floating point imprecision
 ```python
 x = float(input("x: "))
 y = float(input("y: "))
-z = x / y # try 1 / 10 
+z = x / y # try to do 1 / 10 
 # not integer overflow but floating point imprecision
 print(f"x / y = {z:.50f}") # prints 0.10000000000000000555111512312578270211815834045410
 # this is because 1/10 in bin is 0.00011001100... etc to infinite.
@@ -253,7 +271,6 @@ print(f"x / y = {z:.50f}") # prints 0.100000000000000005551115123125782702118158
 # print mit zero digits..
 print(f"{sum2(10):.0f}")
 ```
-
 
 ## Collections
 ### Lists
@@ -396,12 +413,43 @@ Create an empty set with `emptyset = set()`
 
 
 ## Dictionary
-
+Dictionary allow us to work with key value pairs. In other languages also known as hashtables
 Dictionaries are not ordered! Imagine we use a look up tag! Init with dict()
 Key value pairs. Single quotes are necessary in dict for the keys
 A common use of dictionaries is counting how many times we see a value. Ex the frequency of words in a text.  
-It is an error to reference a key which is not in the dict.
+It is an error to reference a key which is not in the dict. integers can be keys too
 We use the in operator to check wether a key is in the dict:   
+```python
+# empty dict
+student = {}
+student = {'name':'John', 'age': 25, 'courses':["math", "CompSci"]}
+print(student['name']) 
+# be careful accessing keys if they do not exists program will exit with error. Get name is better , with default val
+print(student.get('name','not found'))
+#add a key
+student['phone'] = '555-5555'
+student.update({...}) # takes a dict 
+del student['age']
+age = student.pop('age')
+print(age)
+```
+Items in the dict are (key, values) tuples !
+```python
+print((counts.keys()))
+print((counts.values()))
+print((counts.items()))
+```
+We can loop through the keys(default):  
+```python
+for key in counts:
+    print(key, counts[key])
+```
+This will loop through items
+```python
+for key, value in counts.items():
+    print(key, value)
+```
+Creating a dict. Check the frequency of letters:
 ```python
 counts = {}
 pangram = "The quick brown fox jumps over the lazy dog"
@@ -411,25 +459,15 @@ for letter in pangram:
     else:
         counts[letter] = counts[letter] + 1
 print(counts)
-```
-Better: Instead of checking if a key is already in the dic use the get methode with a default
-```python
-counts = {}
+# Better: Instead of checking if a key is already in the dic use the get methode with a default
+
 pangram = "The quick brown fox jumps over the lazy dog"
 for letter in pangram:
     counts[letter] = counts.get(letter, 0) + 1
 print(counts)
 ```
-We can loop through the keys:  
+Get the high count of a letter
 ```python
-for key in counts:
-    print(key, counts[key])
-```
-Items in the dict are (key, values) tuples !
-```python
-print((counts.keys()))
-print((counts.values()))
-print((counts.items()))
 
 for (key, value) in counts.items():
     print(key, value)
@@ -445,7 +483,7 @@ for letter, count in counts.items():
 print("The highest letter count is :",(high_letter, high_count))
 ```
 
-Simple exercise:
+Simple exercise using exit():
 ```python
 from sys import exit
 people = {
@@ -466,9 +504,19 @@ else:
 <h2 id="Flow">Control Flow</h2>
 
 #### Condition
+No switch cases in Python.
+There is `and`, `not` and `or` keyword.
+```python
+if True:
+   print('True")
 
-In python indentation is important. Indent 4 spaces.  
-
+language = 'python'
+if language == 'python':
+   print(language)
+elif language == 'Java':
+   print('language is Java')
+```
+Example:
 ```python
 # Logical operators
 
