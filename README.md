@@ -29,11 +29,16 @@ Table of contents of the course:
 ## Installation
 
 Installation [python 3.8][3]:  
-Check your version:
+Check your version (this is the same in windows command line CMD):
 ```bash
 $ python3 --version
-
 ```
+If on macOS edit your zdh config file with `nano ~/.zshrc` to add an alias and change the command from python3 to python:
+Add this to the very end and save, relaunch zsh
+```bash
+alias python=python3
+```
+Editors for Python: IDLE (comes with Python)Vim, eMacs, Sublime, Atom, PyCharm IDE.
 Install PyCharm IDE.
 Intro in the Python console, IDLE, PyCharm IDE.  
 
