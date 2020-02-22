@@ -190,27 +190,9 @@ Check the type with :
 num = 3
 print(type(num)) #class int!
 ```
-We can of course do addition, substraction, multiplication, modulo.. division need `/` or `//` for the int usual behaviour.
 
-```python
-from math import *
-print(str(2) + " my fav number")
-a = -4
-print(abs(a))
-print(pow(2.3, 6))
-print(max(4, 5))
-print(min(4, 5))
-print(round(5.4)) # up or down 
-my_math = -5
-print(sqrt(36))
-print(floor(5.4))
-print(ceil(5.4))
-# convert into bin
-print(bin(11))
-# convert bin 101 in decimal 
-print(int('102', 2))
-```
 ### Integers
+We can of course do addition, substraction, multiplication, modulo.. division need `/` or `//` for the int usual behaviour.
 ```python
 age = int(input("Age: "))
 print(f"hello, you are at least {age * 365} days old\n")
@@ -226,6 +208,36 @@ print(f"x * y = {x * y}")
 print(f"x / y = {x / y}")
 print(f"x // y = {x // y}")
 print(f"x mod y = {x % y}”)
+a = -4
+print(abs(a))
+print(round(3.75))
+print(round(3.75, 1))
+# casting
+print(int('3'))
+```
+With the math module
+```python
+from math import *
+print(str(2) + " my fav number")
+print(pow(2.3, 6))
+print(max(4, 5))
+print(min(4, 5))
+print(round(5.4)) # up or down 
+my_math = -5
+print(sqrt(36))
+print(floor(5.4))
+print(ceil(5.4))
+# convert into bin
+print(bin(11))
+# convert bin 101 in decimal 
+print(int('102', 2))
+```
+#### Booleans
+```python
+num1 >= num2
+num1 != num2
+num1 < num2
+# etc
 ```
 
 ### Floats
@@ -241,56 +253,7 @@ print(f"x / y = {z:.50f}") # prints 0.100000000000000005551115123125782702118158
 # print mit zero digits..
 print(f"{sum2(10):.0f}")
 ```
-<h3 id="Swap">Swapping values in Python</h3>
 
-In Python it is very easy to swap two values like the below example with two ints:
-
-```python
-# Swaps two integers
-x = 1
-y = 2
-print(f"x is {x}, y is {y}")
-x, y = y, x
-print(f"x is {x}, y is {y}”)
-```
-
-In c for comparison:
-
-```c
-int a = 1;
-int b = 2;
-
-int tmp = a;
-a = b;
-b = tmp;
-```
-
-### Booleans
-
-In python indentation is important. Indent 4 spaces.  
-
-```python
-# Logical operators
-
-# Prompt user for answer
-c = input(“do you agree?  ")
-
-# Check answer
-if c == "Y" or c == "y":
-    print("yes")
-elif c == "N" or c == "n":
-    print(“no")
-```
-Better
-```python
-s = input("Do you agree? \n ")
-
-# Check answer
-if s.lower() in ["y", "yes"]:
-    print("\nagreed!")
-elif s.lower() in ["n", "no"]:
-    print(“no")
-```
 
 ## Collections
 ### Lists
@@ -458,12 +421,60 @@ coordinates[0] = 11
 # no changes supported in tuples they are immutable
 print(coordinates)
 ```
+<h3 id="Swap">Swapping values in Python</h3>
+
+In Python it is very easy to swap two values like the below example with two ints:
+
+```python
+# Swaps two integers
+x = 1
+y = 2
+print(f"x is {x}, y is {y}")
+x, y = y, x
+print(f"x is {x}, y is {y}”)
+```
+
+In c for comparison:
+
+```c
+int a = 1;
+int b = 2;
+
+int tmp = a;
+a = b;
+b = tmp;
+```
 
 
 <h2 id="Flow">Control Flow</h2>
 
-### If Elif Else  
+#### Condition
 
+In python indentation is important. Indent 4 spaces.  
+
+```python
+# Logical operators
+
+# Prompt user for answer
+c = input(“do you agree?  ")
+
+# Check answer
+if c == "Y" or c == "y":
+    print("yes")
+elif c == "N" or c == "n":
+    print(“no")
+```
+Better
+```python
+s = input("Do you agree? \n ")
+
+# Check answer
+if s.lower() in ["y", "yes"]:
+    print("\nagreed!")
+elif s.lower() in ["n", "no"]:
+    print(“no")
+```
+Comparing:
 ```python
 # Prompt user for x
 x = int(input(“x: “))
