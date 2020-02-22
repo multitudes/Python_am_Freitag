@@ -48,17 +48,15 @@ Intro in the Python console, IDLE, PyCharm IDE.
 Make a new file called hello.py and run it in terminal and in pycharm.. and in interpreter.  
 ```python
 print("hello, world”)
-
 ```
 “Hello World” is a constant or a string literal.  
 Python does not need curly braces, semicolons or to imports main etc.   
 It works out of the box.   
 
 ### Comments in python
-`'''` needs to be followed by newline!
+
 ```python
-'''
-this is a comment
+'''this is a comment
 more comment
 '''
 # this too
