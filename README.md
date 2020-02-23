@@ -573,6 +573,7 @@ else:
 ```
 
 ### Loops
+
 (No do while loops in python!)
 
 This give us opportunities for better design
@@ -587,12 +588,30 @@ for i in range(3):
     print("hello")
 friends = ["joe", "tim", "luke"]
 len(friends)
+
 for friend in friends:
     print(friend)
-
 for index in range(len(friends)):
     print(friends[index])
+```
+Continue and break
+```python
 
+nums = [1,2,3,4,5]
+
+for num in nums:
+   if num ==3:
+      continue
+   if num == 4:
+      break
+   print(num)   
+
+# inner loops also possible
+for num in nums:
+   for letter in 'abc':
+      print(num, letter
+
+# loop for a number of times
 for i in range(3, 10):
     print(i)
 for i in [3,4,5,6,7,8,9]:
@@ -670,7 +689,10 @@ email_pieces = email.split("@")
 ```
 
 ## Functions 
-
+Functions are instructions packaged together which execute a specific task.
+Use the `pass' keyword if you want to fill in the function later.
+If function dont have a return value they return `None`
+Allow us to reuse code and put it in a specific location without to repeat it. *#DRY*
 ```python
 def say_hi() :
     print("Hello")
