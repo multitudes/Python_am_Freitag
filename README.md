@@ -692,7 +692,10 @@ email_pieces = email.split("@")
 Functions are instructions packaged together which execute a specific task.
 Use the `pass' keyword if you want to fill in the function later.
 If function dont have a return value they return `None`
-Allow us to reuse code and put it in a specific location without to repeat it. *#DRY*
+Allow us to reuse code and put it in a specific location without to repeat it. **#DRY**
+Takes an input and produces a result. For the beginning think of a function a bit like a black box.
+When we pass a variable to a function it will be only visible locally and not exist outside its local scope.
+
 ```python
 def say_hi() :
     print("Hello")
@@ -720,8 +723,16 @@ def cube(num):
 
 a = cube(2)
 print(a)
-```
 
+```
+Default value
+```python
+def hello_func(greeting,name='you'):
+   return '{}, {}'.format(greeting, name)
+
+print(hello_func('Hi'))
+
+```
 
 ```python
 def raise_to_power(base, power):
@@ -769,6 +780,22 @@ def hello(n):
 if __name__ == "__main__":
     main()
 ```
+#### `*args` and `**kwargs`
+Allow us to accept an arbitrary number of arguments
+```python
+def student_info(*args, **kwargs):
+   print(args) # tuple of our parameters
+   print(kwargs) # dictionary
+   
+student_info('math', 'art',name = 'john',age= 22)
+# also
+courses = ['math', 'art'] # list
+info = {name = 'john', age= 22} # dict
+# these will be unpacked using asterisks!
+student_info(*courses, **info) # same output
+```
+
+
 #### lambda
 Lambdas Are Single-Expression Functions. Try in the interpreter:
 ```python
@@ -799,20 +826,38 @@ if __name__ == "__main__":
 ## Import
 
 Make a file called useful.py
-In the file put this function
+In the file put this 
 ```python
+print("imported module")
+test = 'test string
+
 import Random    
 def roll_dice(num):
     return random.randint(1, num)
 ```
+
 In a new file you call this function inserting the import on the top:
 ```python
 import useful_tools
 
 print(useful_tools.roll_dice(10))
 ```
+It will print the first line of the first file! Do we want this? When we import a file it runs all the functions and instructions we have in that file.. To use the function in the first file we need to type `useful_tools.roll_dice(10)`
+Also we can use `from useful_tools import roll_dice as roll, test`
+and `from useful_tools import *` but frown upon, because harder to track down problems.
 
 Check the docs for more modules!
+Also to the list of directories where python looks for modules when importing: `import sys` and `print(sys.path)`
+What when the file we want to import is not in the same dir? We can manually add the dir to the path: `sys.path.append('/Users/laurentb/Desktop/my_module)` better is however changing the environment variable.
+Edit the `~/.bash_profile` or `~/.zshrc` for mac adding to the end `export PYTHONPATH='/Users/laurentb/Desktop/my_module`.
+Now our folder is on the path! 
+On Windows, start button, right click on computer, go to properties, advanced system settings and environment variable. Tap on New and enter in uppercase PYTHONPATH and the path (with backslashes)
+
+### Standard Library
+`sys.path` looks at the standard library directory. We are able to import without problems. Ex random module from the standard lib.
+`import random`. For math there is the `math` module. `import datetime` and `datetime.date.today()`, `calendar`.
+`os` is very useful. Current dir is `os.getcwd()`, getting the location of the file in the standard lib is `os.__file__`
+We can see the whole standard library!
 
 #### QR
 ```python
