@@ -1944,6 +1944,14 @@ area = np.pi * (20 * np.random.rand(N)) **2
 plt.scatter(x, y, s=area, c = colors, alpha=0.5)
 plt.show()
 ```
+`%%HTML` is a cell magic command which allows the whole cell to be treated as HTML code. There is the `%%javascript` one and also `%%timeit` to time the code in the cell.
+
+Panda and numpy are uesd very often in the notebooks for data science.
+
+You can export the notebook as python file or html. The html version is not editable anymore but I can add it in my blog etc.
+To share I just give the `ipynb` file which is a json format file with the contents formatted in a dictionary. Multiple kernel can be used for different versions of Python.
+
+Here youwill find an extensive [collection of notebooks][5]
 
 
 
@@ -1955,3 +1963,4 @@ plt.show()
 [2]: <https://forums.fast.ai/t/recommended-python-learning-resources/26888>
 [3]: <https://www.python.org/downloads/>
 [4]: <https://jupyter.org/install>
+[5]: <https://nbviewer.jupyter.org/github/ipython/ipython/blob/master/examples/IPython%20Kernel/Index.ipynb>
