@@ -1930,6 +1930,20 @@ This works like in terminal!
 `%ls -la`
 Some of the most common is 
 `%matplotlib inline` allows the plots to be displayed in the notebook.
+For example:
+```python
+%matplotlib inline
+import matplotlib.pyplot as plt
+import numpy as np
+N = 50
+x = np.random.rand(N)
+y = np.random.rand(N)
+colors = np.random.rand(N)
+
+area = np.pi * (20 * np.random.rand(N)) **2
+plt.scatter(x, y, s=area, c = colors, alpha=0.5)
+plt.show()
+```
 
 
 
