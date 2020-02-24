@@ -1911,8 +1911,33 @@ and for the xkcd feel add this instead of using a style:
 plt.xkcd()
 '''
 
+## Jupyter Notebooks
+
+To run code interactively within a webbrowser alongside visualisation and a markdown text. Based on iPython which is now rolled in the Jupyter Project. Lots of scientific institutions are using the notebooks in order to explain how they got their results
+To install from their [page][4], they suggest to install Anaconda. Anaconda is a huge package and comes bundled with Jupyter.
+Use the prompt to display results without using print() all the time. 
+Put text in markdown cells, and code in code cells.
+Using an `!` I can run the bash commands inside the notebook like:
+`!pip list`
+Also come with a bunch of built in commands called magic.
+They beginn either with a `%` (which means the command line argument will all come from the same line) called 
+*line magics* and `%%` (which means the entire cell will be executed as a command) called *cell magic*.
+ex list all the magic commands split inline magic anc cell magic with:
+`%lsmagic'
+This will print our working directory:
+`%pwd'
+This works like in terminal!
+`%ls -la`
+Some of the most common is 
+`%matplotlib inline` allows the plots to be displayed in the notebook.
+
+
+
+
+
 
 
 [1]: <https://hg.python.org/cpython/file/tip/Lib/antigravity.py> "Hobbit lifestyles"
 [2]: <https://forums.fast.ai/t/recommended-python-learning-resources/26888>
 [3]: <https://www.python.org/downloads/>
+[4]: <https://jupyter.org/install>
