@@ -1891,7 +1891,7 @@ plt.legend(loc=0)
 plt.show()
 ```
 adding two graphs at once. with markers and colors(which can be hex)
-```
+```python
 plt.plot(dev_x,dev_y, color='k',linestyle='--',marker=".", label = 'salaries/age')
 plt.plot(dev_x,py_dev_y,color='#5a7d9a',marker="o",linewidth=3, label = 'Python salaries/age')
 plt.plot(dev_x,js_dev_y,color='#444444',marker="o",linewidth=3, label = 'Python salaries/age')
@@ -1953,10 +1953,31 @@ To share I just give the `ipynb` file which is a json format file with the conte
 
 Here youwill find an extensive [collection of notebooks][5]
 
+## Django
+ 
+in terminal. Activate a new env and install Django 
+```bash
+$ pip install django 
+$ python -m django --version 
+
+# for a list of all subcommands
+$ django-admin
+
+# startproject will create a new project- I named mine my_django
+$ django-admin startproject my_django
+
+# run server
+$ python manage.py runserver 
+
+# it will give you a localhost address
+# try http://127.0.0.1:8000/admin
+```
+A single project can contain multiple apps
+ 
+```python
 
 
-
-
+```
 
 
 [1]: <https://hg.python.org/cpython/file/tip/Lib/antigravity.py> "Hobbit lifestyles"
