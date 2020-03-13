@@ -1972,12 +1972,79 @@ $ python manage.py runserver
 # it will give you a localhost address
 # try http://127.0.0.1:8000/admin
 ```
-A single project can contain multiple apps
- 
-```python
+A single project can contain multiple apps.
+Create a new app with the command startapp and name
 
+```bash
+$ python manage.py startapp blog
+```
+
+edit the views file inside the folder blog
+
+```python
+# add
+from django.http import HttpResponse
+
+# Create your views here.
+
+def home(request):
+    return HttpResponse('<h1>Blog Home</h1>')
+```
+create a new file in the app directory and name it urls.py
+
+```python
+from django.urls import path
+from . import views
+
+urlpatterns = [
+    path('/', views.home, name='blog-home'),
+] 
 
 ```
+Next create templetas to avoid repeating the html in the views!
+Create a new 'templates' folder. By convention needs to have a dir with the same name as the app. in the blog dir then create the html template files for blog and about. 
+Insert this info in the apps.py file in the app
+
+```python
+from django.apps import AppConfig
+
+
+class BlogConfig(AppConfig):
+    name = 'blog'
+```
+open the settings.py file in the project and add the BlogConfig class in it there
+
+```python
+# Application definition
+
+INSTALLED_APPS = [
+    'blog.apps.BlogConfig',
+```
+
+make a template
+
+get bootstraps for instance for a quick demo
+https://getbootstrap.com/docs/4.3/getting-started/introduction/#starter-template
+
+Get the admin login working
+
+```bash
+$ python manage.py createsuperuser
+```
+
+But for that to work you need a database.
+First you need to 
+
+```bash
+$ python manage.py makemigrations
+$ python manage.py migrate 
+$ python manage.py createsuperuser
+```
+
+Now you can login. The good thing about Django is that it comes with a really awesome admin site by default.
+Django has a built in ORM Object Relational Mapper . 
+
+
 
 
 [1]: <https://hg.python.org/cpython/file/tip/Lib/antigravity.py> "Hobbit lifestyles"
