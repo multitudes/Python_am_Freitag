@@ -2056,20 +2056,136 @@ $ python manage.py createsuperuser
 But for that to work you need a database.
 First you need to 
 
-```bash
+```bash 
 $ python manage.py makemigrations
 $ python manage.py migrate 
 $ python manage.py createsuperuser
+# prompt will ask for username and password!
+
 ```
 
 Now you can login. The good thing about Django is that it comes with a really awesome admin site by default.
-Django has a built in ORM Object Relational Mapper . 
+Django has a built in ORM Object Relational Mapper. This allows us to later change database engines without affecting our code base. You could use a sqlite db for testing and a postgres for production.
+We can represent our db structure as classes and those classes as models. So lets go to the models.py. Django has a built in user model already!
+We start making a POST model inheriting from the model class
+
+```python 
+from django.db import models
+from django.utils import timezone
+from django.contrib.auth.models import User
 
 
+# Create your models here.
+class Post(models.Model):
+    title = models.CharField(max_length=100)
+    content = models.TextField()
+    date_posted = models.DateTimeField(default=timezone.now)
+    author = models.ForeignKey(User, on_delete=models.CASCADE)
 
+# this is dunder (__) / magic method to specify how the class will be descripted when printed   
+    def __str__(self):
+        return self.title
+```
+To apply those changes we need to use the ` 
+command makemigrations`
+```bash 
+$ python manage.py makemigrations
+# then we see a file in our migration folder starting like 0001_initial.py
+# To see the sql being generated we do:
+$ python manage.py sqlmigrate blog 0001
+# then we apply what we just prepared with
+$ python manage.py migrate
+
+```
+migrations allow us to make changes to our database even after it has been created. Super useful
+
+With the shell command we can interactively operate on create the tables( classes and models)
+
+```bash 
+$ python manage.py shell
+
+# this is our shell!
+>>> from blog.models import Post
+>>> from django.contrib.auth.models import User
+>>> User.objects.all()
+<QuerySet [<User: laurent>, <User: test>, <User: CoreyMS>]>
+>>> User.objects.first()
+<User: laurent>
+>>> User.objects.filter(username="laurent")
+<QuerySet [<User: laurent>]>
+>>> User.objects.filter(username="laurent").first()
+<User: laurent>
+>>> user = User.objects.filter(username="laurent").first()
+>>> user.id
+1
+>>> user.pk
+1
+>>> user = User.objects.get(id=1)
+>>> user
+<User: laurent>
+
+# lets create posts. At the moment it is empty
+>>> Post.objects.all()
+# date shd be automatic
+>>> post_1 = Post(title = 'Blog 1', content = 'First Post Content!', author=user)
+>>> post_1.save()
+>>> Post.objects.all()
+<QuerySet [<Post: Blog 1>]>
+>>> user = User.objects.filter(username="laurent").first()
+>>> post_2 = Post(title = 'Blog 2', content = 'second  Post Content!', author=user)
+>>> post_3 = Post(title = 'Blog 3', content = 'third  Post Content!', author_id=user.id)
+>>> post_2.save()
+>>> post_3.save()
+>>> Post.objects.all()
+<QuerySet [<Post: blog1>, <Post: Blog 1>, <Post: Blog 2>, <Post: Blog 3>]>
+>>> post = Post.objects.first()
+>>> post.content
+'first'
+>>> post.date_posted
+datetime.datetime(2020, 3, 13, 15, 47, 12, 304878, tzinfo=<UTC>)
+>>> post.author_id
+1
+>>> post.author
+<User: laurent>
+>>> post.author.email
+'laurentbrusa@me.com'
+
+# look for all post of an user
+>>> user.post_set
+<django.db.models.fields.related_descriptors.create_reverse_many_to_one_manager.<locals>.RelatedManager object at 0x10e633fa0>
+>>> user.post_set.all()
+<QuerySet [<Post: blog1>, <Post: Blog 1>, <Post: Blog 2>, <Post: Blog 3>]>
+# use post_set to create post. user is implicit
+>>> user.post_set.create(title='Blog 4', content='4th post content!')
+<Post: Blog 4>
+>>> exit()
+
+```
+Now we have dummy data in our database. Our views.py will be now 
+```
+from django.shortcuts import render
+from .models import Post
+
+# Create your views here.
+
+
+def home(request):
+    context = {
+        'posts': Post.objects.all()
+    }
+    return render(request, 'blog/home.html', context)
+
+def about(request):
+    return render(request, 'blog/about.html', {'title': 'About'})
+```
+
+Change the format of dates. Within out template tags there are various way to change the formatting of a date field.
+ex. `{{ post.date_posted|date:"F d, Y" }}`
+[https://docs.djangoproject.com...builtins/#date][6]
 
 [1]: <https://hg.python.org/cpython/file/tip/Lib/antigravity.py> "Hobbit lifestyles"
 [2]: <https://forums.fast.ai/t/recommended-python-learning-resources/26888>
 [3]: <https://www.python.org/downloads/>
 [4]: <https://jupyter.org/install>
 [5]: <https://nbviewer.jupyter.org/github/ipython/ipython/blob/master/examples/IPython%20Kernel/Index.ipynb>
+[6]: <https://docs.djangoproject.com/en/3.0/ref/templates/builtins/#date>
