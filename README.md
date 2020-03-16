@@ -2183,6 +2183,62 @@ Change the format of dates. Within out template tags there are various way to ch
 ex. `{{ post.date_posted|date:"F d, Y" }}`
 [https://docs.djangoproject.com...builtins/#date][6]
 
+To see the posts in the admin page on the website I will need to add my model to the admin.py file in blog folder.
+```
+from .models import Post
+
+# Register your models here.
+admin.site.register(Post)
+```
+
+#### User registration
+The admin page is good for managing users, but if you are making an app for users accessing your site then you will need something more powerful.
+The best is to create a new app for user logic accounts admin.
+Update the settings.py with the name of your app.
+Edit the views.py file with a new form. Django provide a form for user registration with `from django.contrib.auth.forms import UserCreationForm'
+```
+def register(request):
+    if request.method == 'POST':
+        form = UserCreationForm(request.POST)
+        if form.is_valid():
+            username = form.cleaned_data.get('username')
+            messages.success(request, f'account created for {username}!')
+            return redirect('blog-home')
+    else:
+        form = UserCreationForm()
+    return render(request, 'users/register.html', {'form': form})
+```
+
+create a templates folder with users folder and register.html file. We gonna extend it with our existing template.
+`{% csrf_token %}` is a security enhancement. It is needed!
+
+```html
+{% extends "blog/base.html" %}
+{% load crispy_forms_tags %}
+{% block content %}
+    <div class="content-section">
+        <form method="POST">
+            {% csrf_token %}
+            <fieldset class="form-group">
+                <legend class="border-bottom mb-4">Join Today</legend>
+                {{ form|crispy }}
+            </fieldset>
+            <div class="form-group">
+                <button class="btn btn-outline-info" type="submit">Sign Up</button>
+            </div>
+        </form>
+        <div class="border-top pt-3">
+            <small class="text-muted">
+                Already Have An Account? <a class="ml-2" href="#">Sign In</a>
+            </small>
+        </div>
+    </div>
+{% endblock content %}
+```
+
+
+
+
 [1]: <https://hg.python.org/cpython/file/tip/Lib/antigravity.py> "Hobbit lifestyles"
 [2]: <https://forums.fast.ai/t/recommended-python-learning-resources/26888>
 [3]: <https://www.python.org/downloads/>
