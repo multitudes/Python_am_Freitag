@@ -2195,14 +2195,16 @@ admin.site.register(Post)
 The admin page is good for managing users, but if you are making an app for users accessing your site then you will need something more powerful.
 The best is to create a new app for user logic accounts admin.
 Update the settings.py with the name of your app.
-Edit the views.py file with a new form. Django provide a form for user registration with `from django.contrib.auth.forms import UserCreationForm'
+Edit the views.py file with a new form. Django provide a form for user registration with `from django.contrib.auth.forms import UserCreationForm` which when later the new file `forms.py` will be created will be changed to `from .forms import UserRegisterForm`
+
 ```
 def register(request):
     if request.method == 'POST':
-        form = UserCreationForm(request.POST)
+        form = UserRegisterForm(request.POST)
         if form.is_valid():
+            form.save()
             username = form.cleaned_data.get('username')
-            messages.success(request, f'account created for {username}!')
+            messages.success(request, f'Account created for {username}!')
             return redirect('blog-home')
     else:
         form = UserCreationForm()
@@ -2236,7 +2238,28 @@ create a templates folder with users folder and register.html file. We gonna ext
 {% endblock content %}
 ```
 
+What if I want to add a field to the form?
+I need to create a new file `forms.py`.
+```python
+from django import forms
+from django.contrib.auth.models import User
+from django.contrib.auth.forms import UserCreationForm
 
+
+class UserRegisterForm(UserCreationForm):
+    email = forms.EmailField()
+
+    class Meta:
+        model = User
+        fields = ['username', 'email', 'password1', 'password2']
+
+```
+
+Then we will use 'Crispy-Forms' for the form styling
+
+#### Create the simple user login page
+
+ 
 
 
 [1]: <https://hg.python.org/cpython/file/tip/Lib/antigravity.py> "Hobbit lifestyles"
