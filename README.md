@@ -1964,6 +1964,7 @@ $ python -m django --version
 $ django-admin
 
 # startproject will create a new project- I named mine my_django
+# this creates a folder with manage.py, settings.py, urls.py files
 $ django-admin startproject my_django
 
 # run server
@@ -2003,7 +2004,7 @@ urlpatterns = [
 ```
 Next create templetas to avoid repeating the html in the views!
 Create a new 'templates' folder. By convention needs to have a dir with the same name as the app. in the blog dir then create the html template files for blog and about. 
-Insert this info in the apps.py file in the app
+Insert this info in the apps.py file in the app.
 
 ```python
 from django.apps import AppConfig
@@ -2026,7 +2027,27 @@ make a template
 get bootstraps for instance for a quick demo
 https://getbootstrap.com/docs/4.3/getting-started/introduction/#starter-template
 
-Get the admin login working
+The CSS goes into a newly created static folder inside the blogapp. blog -> static -> blog -> main.css 
+```python
+{% load static %}
+
+# and in the template
+    <link rel="stylesheet" type="text/css" href="{% static 'blog/main.css' %}" /> 
+
+# and you do not hardcode the links but use the urls file we had: "href="{% url 'blog-home' %}" 
+# and this is encoded in urls.py in the project
+          <a class="nav-item nav-link" href="{% url 'blog-home' %}">Home</a>
+          <a class="nav-item nav-link" href="{% url 'blog-about' %}">About</a>
+        </div>
+        <!-- Navbar Right Side -->
+        <div class="navbar-nav">
+          <a class="nav-item nav-link" href="#">Login</a>
+          <a class="nav-item nav-link" href="#">Register</a>
+```
+
+#### admin login
+
+Get the admin login working!
 
 ```bash
 $ python manage.py createsuperuser
