@@ -1788,6 +1788,12 @@ if __name__=='__main__':
 
 <h2 id = "resources">A List of Python Resources</h2>
 
+Tip from Mari:  
+[pythonfordesigners.com](http://pythonfordesigners.com)
+And the slides to her talk
+[Marielle Dado - Teaching Python To Beginners A Guide For Experts](https://github.com/marielledado/TeachingPythonToBeginners_AGuideForExperts)
+
+
 [FastAI forums: Recommended Python learning resources][2]
 
 * Beginners to programming  
